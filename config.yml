@@ -1,0 +1,62 @@
+# Crane 的个人主页配置
+# 修改后运行 `python3 generator.py` 重新生成 SVG,提交即生效
+
+username: CraneBW
+
+profile:
+  name: "Crane"
+  tagline: "AI Security Researcher · Photography Lover"
+  tagline_cn: "AI 安全研究者 · 摄影爱好者"
+  initial: "C"
+  philosophy: "Chasing stars in code and in the night sky."
+  # 座右铭:编码与夜空,皆为追星
+
+galaxy_arms:
+  - name: "AI Security"
+    color: "cyan"
+    items: ["Python", "PyTorch", "TensorFlow", "LLM"]
+  - name: "Web Dev"
+    color: "violet"
+    items: ["Django", "Vue", "JavaScript", "SQL"]
+  - name: "Dev Tools"
+    color: "amber"
+    items: ["Git", "Docker", "Linux", "GitHub Actions"]
+
+cards:
+  - icon: "🎓"
+    title: "Education"
+    title_cn: "教育"
+    lines:
+      - "B.Sc. CS @ Ningbo University"
+      - "宁波大学 · 计算机科学与技术"
+      - "M.Sc. Cybersec @ NUAA (incoming)"
+      - "研0 · 南京航空航天大学 · 网络安全"
+  - icon: "🔬"
+    title: "Research"
+    title_cn: "研究"
+    lines:
+      - "AI Security"
+      - "AI 安全方向"
+      - "Adversarial ML · LLM Security"
+      - "对抗机器学习 · 大模型安全"
+  - icon: "📸"
+    title: "Photography"
+    title_cn: "摄影"
+    lines:
+      - "Astrophotography · Cityscape"
+      - "星野银河 · 城市风光"
+      - "my shots: see gallery below"
+      - "作品见下方摄影展区"
+
+theme:
+  void: "#070b16"
+  nebula: "#0e1626"
+  star_dust: "#1a2332"
+  cyan: "#22d3ee"
+  violet: "#a78bfa"
+  amber: "#fbbf24"
+  text_bright: "#e2e8f0"
+  text_dim: "#94a3b8"
+  text_faint: "#64748b"
+
+random_seed: 42
