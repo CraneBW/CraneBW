@@ -47,20 +47,19 @@ B.Sc. Computer Science @ Ningbo University → M.Sc. Cybersec @ NUAA *(incoming)
 ### 📸 Photography / 摄影展区
 
 <div align="center">
-  <img src="./assets/photos/milkyway-nasa.jpg" width="850" alt="The Galactic Center"/>
+  <img src="./assets/photos/galaxy.jpg" width="850" alt="The Milky Way, shot by Crane"/>
   <br/>
-  <sub>*The Milky Way's Center — Spitzer Space Telescope, NASA (public domain)*</sub>
+  <sub>*The Milky Way over our hometown — shot by me, Aug 2026*</sub>
 </div>
 
 <br/>
 
 <div align="center">
-  <b>My shots / 我的作品</b>
+  <b>More shots / 更多作品</b>
   <br/><br/>
-  <img src="./assets/photos/galaxy.jpg" width="400" alt="银河 by Crane"/>
-  <img src="./assets/photos/lotus.jpg" width="250" alt="公园荷叶 by Crane"/>
-  <img src="./assets/photos/bridge.jpg" width="165" alt="三官堂大桥 by Crane"/>
-  <img src="./assets/photos/park.jpg" width="250" alt="公园 by Crane"/>
+  <img src="./assets/photos/lotus.jpg" width="280" alt="公园荷叶 by Crane"/>
+  <img src="./assets/photos/park.jpg" width="280" alt="公园 by Crane"/>
+  <img src="./assets/photos/bridge.jpg" width="190" alt="三官堂大桥 by Crane"/>
 </div>
 
 <br/>
