@@ -74,9 +74,7 @@ B.Sc. Computer Science @ Ningbo University → M.Sc. Cybersec @ NUAA *(incoming)
 <!-- 联系方式:把占位换成你的邮箱/博客/社交链接 -->
 <p align="center">
   <samp>
-    <a href="mailto:your-email@example.com">email</a> .
-    <a href="https://github.com/CraneBW">github</a> .
-    <a href="https://your-blog.com">blog</a> .
-    <a href="https://www.zhihu.com/people/your-id">zhihu</a>
+    <a href="mailto:3116767084@qq.com">email</a> .
+    <a href="https://github.com/CraneBW">github</a>
   </samp>
 </p>

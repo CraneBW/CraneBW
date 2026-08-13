@@ -181,15 +181,8 @@ def build_header(cfg):
     add(css.replace("__CX__", str(CX)).replace("__CY__", str(CY)))
     add("    </style>")
 
-    # 滤镜:星云模糊 / 发光
-    add(f'    <filter id="nebula-outer"><feGaussianBlur stdDeviation="60"/></filter>')
-    add(f'    <filter id="nebula-inner"><feGaussianBlur stdDeviation="30"/></filter>')
-    add(f'    <filter id="label-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.5"/></filter>')
-    add(f'    <filter id="core-bright-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4"/></filter>')
-    for name, c in (("cyan", T["cyan"]), ("violet", T["violet"]), ("amber", T["amber"])):
-        add(f'    <filter id="star-glow-{name}" x="-100%" y="-100%" width="300%" height="300%">'
-            f'<feGaussianBlur stdDeviation="3"/><feFlood flood-color="{c}" flood-opacity="0.55"/>'
-            f'<feComposite in2="SourceGraphic" operator="in"/></filter>')
+    # 滤镜:只保留核心亮点的小模糊(Firefox 对大面积模糊在 CPU 上开销大,星云/发光用渐变/纯色代替)
+    add(f'    <filter id="core-bright-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>')
     add(f'    <radialGradient id="core-haze" cx="50%" cy="50%" r="50%">'
         f'<stop offset="0%" stop-color="{T["cyan"]}" stop-opacity="0.5"/>'
         f'<stop offset="50%" stop-color="{T["violet"]}" stop-opacity="0.2"/>'
@@ -206,10 +199,10 @@ def build_header(cfg):
     # 1. 背景
     add(f'  <rect x="0" y="0" width="{W}" height="{H}" rx="14" ry="14" fill="{T["void"]}"/>')
 
-    # 2. 星云光晕
-    add(f'  <circle cx="245" cy="130" r="120" fill="{T["violet"]}" opacity="0.018" filter="url(#nebula-outer)"/>')
-    add(f'  <circle cx="640" cy="180" r="110" fill="{T["amber"]}" opacity="0.014" filter="url(#nebula-outer)"/>')
-    add(f'  <circle cx="{CX}" cy="{CY+40}" r="150" fill="{T["cyan"]}" opacity="0.012" filter="url(#nebula-outer)"/>')
+    # 2. 星云光晕(低透明度纯色圆模拟模糊,无滤镜)
+    add(f'  <circle cx="245" cy="130" r="120" fill="{T["violet"]}" opacity="0.05"/>')
+    add(f'  <circle cx="640" cy="180" r="110" fill="{T["amber"]}" opacity="0.04"/>')
+    add(f'  <circle cx="{CX}" cy="{CY+40}" r="150" fill="{T["cyan"]}" opacity="0.04"/>')
 
     # 3. 星场(三层,固定种子可复现;数量控制以降低渲染负载)
     star_colors = ["#ffffff", T["cyan"], T["violet"], T["amber"]]
@@ -292,8 +285,6 @@ def build_header(cfg):
             add(f'  <line x1="{x:.1f}" y1="{y:.1f}" x2="{lx:.1f}" y2="{ly:.1f}" '
                 f'stroke="{color}" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>')
             add(f'  <text x="{tx:.1f}" y="{ly + 3:.1f}" text-anchor="{anchor}" fill="{color}" '
-                f'font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">{esc(item)}</text>')
-            add(f'  <text x="{tx:.1f}" y="{ly + 3:.1f}" text-anchor="{anchor}" fill="{color}" '
                 f'font-size="9.5" font-family="monospace" opacity="0.9">{esc(item)}</text>')
 
     # 7. 轨道环(两圈反向旋转的虚线椭圆)
@@ -343,10 +334,6 @@ def build_cards(cfg):
     s = []
     add = s.append
     add(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">')
-    add("  <defs>")
-    add(f'    <filter id="card-glow" x="-50%" y="-50%" width="200%" height="200%">'
-        f'<feGaussianBlur stdDeviation="6"/></filter>')
-    add("  </defs>")
 
     colors = [T["cyan"], T["violet"], T["amber"]]
     for i, card in enumerate(cards):
@@ -413,10 +400,8 @@ def build_hero(cfg, photo_path):
       }"""
     add(css.replace("__CX__", str(CX)).replace("__CY__", str(CY)))
     add("    </style>")
-    add(f'    <filter id="nebula-outer"><feGaussianBlur stdDeviation="60"/></filter>')
-    add(f'    <filter id="nebula-inner"><feGaussianBlur stdDeviation="30"/></filter>')
-    add(f'    <filter id="label-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.5"/></filter>')
-    add(f'    <filter id="core-bright-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4"/></filter>')
+    # 注意:不定义 feGaussianBlur 滤镜——Firefox 在 CPU 上逐像素计算模糊,开销大
+    add(f'    <filter id="core-bright-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>')
     add(f'    <radialGradient id="core-haze" cx="50%" cy="50%" r="50%">'
         f'<stop offset="0%" stop-color="{T["cyan"]}" stop-opacity="0.45"/>'
         f'<stop offset="50%" stop-color="{T["violet"]}" stop-opacity="0.18"/>'
@@ -442,10 +427,10 @@ def build_hero(cfg, photo_path):
     add(f'  <rect x="0" y="0" width="{W}" height="{H}" fill="url(#dim-top)"/>')
     add(f'  <rect x="0" y="0" width="{W}" height="{H}" fill="{T["void"]}" opacity="0.35"/>')
 
-    # 3. 星云光晕(叠在照片上增强星系感)
-    add(f'  <circle cx="{CX}" cy="{CY+30}" r="150" fill="{T["cyan"]}" opacity="0.10" filter="url(#nebula-outer)"/>')
-    add(f'  <circle cx="{CX-180}" cy="{CY-60}" r="110" fill="{T["violet"]}" opacity="0.10" filter="url(#nebula-outer)"/>')
-    add(f'  <circle cx="{CX+190}" cy="{CY+40}" r="100" fill="{T["amber"]}" opacity="0.07" filter="url(#nebula-outer)"/>')
+    # 3. 星云光晕(渐变圆模拟模糊,无滤镜——Firefox 兼容)
+    add(f'  <circle cx="{CX}" cy="{CY+30}" r="150" fill="url(#core-haze)" opacity="0.5"/>')
+    add(f'  <circle cx="{CX-180}" cy="{CY-60}" r="110" fill="{T["violet"]}" opacity="0.06"/>')
+    add(f'  <circle cx="{CX+190}" cy="{CY+40}" r="100" fill="{T["amber"]}" opacity="0.05"/>')
 
     # 4. 少量闪烁星点缀(照片自带星空,这里补动态星星;数量控制以降低渲染负载)
     for _ in range(10):
@@ -505,8 +490,6 @@ def build_hero(cfg, photo_path):
                 f'begin="{j * 0.5}s" repeatCount="indefinite"/></circle>')
             add(f'  <line x1="{x:.1f}" y1="{y:.1f}" x2="{lx:.1f}" y2="{ly:.1f}" stroke="{color}" '
                 f'stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>')
-            add(f'  <text x="{tx:.1f}" y="{ly + 3:.1f}" text-anchor="{anchor}" fill="{color}" '
-                f'font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">{esc(item)}</text>')
             add(f'  <text x="{tx:.1f}" y="{ly + 3:.1f}" text-anchor="{anchor}" fill="{color}" '
                 f'font-size="9.5" font-family="monospace" opacity="0.9">{esc(item)}</text>')
 
