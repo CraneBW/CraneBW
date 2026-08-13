@@ -214,7 +214,7 @@ def build_header(cfg):
     # 3. 星场(三层,固定种子可复现;数量控制以降低渲染负载)
     star_colors = ["#ffffff", T["cyan"], T["violet"], T["amber"]]
     for layer, base_op in (("star-bg", 0.2), ("star-mid", 0.35), ("star-fg", 0.55)):
-        for _ in range(24):
+        for _ in range(12):
             x = rng.uniform(6, W - 6)
             y = rng.uniform(8, H - 8)
             r = rng.uniform(0.4, 1.0)
@@ -286,9 +286,7 @@ def build_header(cfg):
             lx, ly = x + ux * 22, y + uy * 12
             anchor = "start" if x > CX + 30 else "end"
             tx = lx + (4 if anchor == "start" else -4)
-            add(f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="2.6" fill="{color}" opacity="0.9">'
-                f'<animate attributeName="opacity" values="0.9;1;0.9" dur="5s" '
-                f'begin="{j * 0.5}s" repeatCount="indefinite"/></circle>')
+            add(f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="2.6" fill="{color}" opacity="0.9"/>')
             add(f'  <line x1="{x:.1f}" y1="{y:.1f}" x2="{lx:.1f}" y2="{ly:.1f}" '
                 f'stroke="{color}" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>')
             add(f'  <text x="{tx:.1f}" y="{ly + 3:.1f}" text-anchor="{anchor}" fill="{color}" '
@@ -444,7 +442,7 @@ def build_hero(cfg, photo_path):
     add(f'  <circle cx="{CX+190}" cy="{CY+40}" r="100" fill="{T["amber"]}" opacity="0.07" filter="url(#nebula-outer)"/>')
 
     # 4. 少量闪烁星点缀(照片自带星空,这里补动态星星;数量控制以降低渲染负载)
-    for _ in range(10):
+    for _ in range(5):
         x = rng.uniform(8, W - 8)
         y = rng.uniform(10, H - 10)
         r = rng.uniform(0.5, 1.0)
@@ -496,9 +494,7 @@ def build_hero(cfg, photo_path):
             lx, ly = x + ux * 22, y + uy * 12
             anchor = "start" if x > CX + 30 else "end"
             tx = lx + (4 if anchor == "start" else -4)
-            add(f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="2.6" fill="{color}" opacity="0.9">'
-                f'<animate attributeName="opacity" values="0.9;1;0.9" dur="5s" '
-                f'begin="{j * 0.5}s" repeatCount="indefinite"/></circle>')
+            add(f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="2.6" fill="{color}" opacity="0.9"/>')
             add(f'  <line x1="{x:.1f}" y1="{y:.1f}" x2="{lx:.1f}" y2="{ly:.1f}" stroke="{color}" '
                 f'stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>')
             add(f'  <text x="{tx:.1f}" y="{ly + 3:.1f}" text-anchor="{anchor}" fill="{color}" '

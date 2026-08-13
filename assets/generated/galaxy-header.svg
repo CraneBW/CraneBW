@@ -52,66 +52,30 @@
   <circle cx="229.7" cy="274.0" r="0.79" fill="#22d3ee" opacity="0.15" class="star-bg" style="animation-delay: 1.5s"/>
   <circle cx="393.4" cy="84.7" r="0.96" fill="#22d3ee" opacity="0.17" class="star-bg" style="animation-delay: 5.1s"/>
   <circle cx="656.3" cy="73.0" r="0.42" fill="#a78bfa" opacity="0.14" class="star-bg" style="animation-delay: 0.4s"/>
-  <circle cx="771.2" cy="169.1" r="0.83" fill="#22d3ee" opacity="0.17" class="star-bg" style="animation-delay: 2.4s"/>
-  <circle cx="772.4" cy="138.3" r="0.56" fill="#22d3ee" opacity="0.17" class="star-bg" style="animation-delay: 3.2s"/>
-  <circle cx="632.0" cy="129.7" r="0.75" fill="#a78bfa" opacity="0.12" class="star-bg" style="animation-delay: 6.0s"/>
-  <circle cx="433.0" cy="33.8" r="0.43" fill="#ffffff" opacity="0.12" class="star-bg" style="animation-delay: 1.0s"/>
-  <circle cx="576.2" cy="177.4" r="0.63" fill="#fbbf24" opacity="0.15" class="star-bg" style="animation-delay: 5.8s"/>
-  <circle cx="727.3" cy="11.3" r="0.83" fill="#a78bfa" opacity="0.18" class="star-bg" style="animation-delay: 2.0s"/>
-  <circle cx="252.0" cy="52.9" r="0.40" fill="#a78bfa" opacity="0.20" class="star-bg" style="animation-delay: 4.6s"/>
-  <circle cx="431.4" cy="38.2" r="0.78" fill="#22d3ee" opacity="0.12" class="star-bg" style="animation-delay: 4.6s"/>
-  <circle cx="458.0" cy="229.1" r="0.72" fill="#ffffff" opacity="0.16" class="star-bg" style="animation-delay: 2.9s"/>
-  <circle cx="99.7" cy="111.1" r="0.99" fill="#a78bfa" opacity="0.12" class="star-bg" style="animation-delay: 1.4s"/>
-  <circle cx="481.4" cy="30.4" r="0.84" fill="#ffffff" opacity="0.20" class="star-bg" style="animation-delay: 3.2s"/>
-  <circle cx="111.4" cy="195.4" r="0.97" fill="#22d3ee" opacity="0.13" class="star-bg" style="animation-delay: 5.2s"/>
-  <circle cx="360.6" cy="68.2" r="0.72" fill="#22d3ee" opacity="0.30" class="star-mid" style="animation-delay: 2.4s"/>
-  <circle cx="568.9" cy="114.1" r="0.94" fill="#fbbf24" opacity="0.20" class="star-mid" style="animation-delay: 1.3s"/>
-  <circle cx="289.3" cy="175.1" r="0.54" fill="#22d3ee" opacity="0.18" class="star-mid" style="animation-delay: 4.2s"/>
-  <circle cx="55.3" cy="27.1" r="0.42" fill="#a78bfa" opacity="0.19" class="star-mid" style="animation-delay: 1.4s"/>
-  <circle cx="566.6" cy="68.8" r="0.48" fill="#fbbf24" opacity="0.22" class="star-mid" style="animation-delay: 2.8s"/>
-  <circle cx="347.1" cy="34.8" r="0.80" fill="#a78bfa" opacity="0.25" class="star-mid" style="animation-delay: 2.8s"/>
-  <circle cx="617.0" cy="199.2" r="0.99" fill="#ffffff" opacity="0.19" class="star-mid" style="animation-delay: 4.4s"/>
-  <circle cx="676.9" cy="39.0" r="0.51" fill="#fbbf24" opacity="0.20" class="star-mid" style="animation-delay: 1.1s"/>
-  <circle cx="393.7" cy="256.4" r="0.45" fill="#ffffff" opacity="0.18" class="star-mid" style="animation-delay: 6.0s"/>
-  <circle cx="706.6" cy="283.2" r="0.96" fill="#22d3ee" opacity="0.20" class="star-mid" style="animation-delay: 2.9s"/>
-  <circle cx="185.1" cy="121.9" r="0.44" fill="#fbbf24" opacity="0.18" class="star-mid" style="animation-delay: 2.3s"/>
-  <circle cx="782.4" cy="231.0" r="0.57" fill="#fbbf24" opacity="0.20" class="star-mid" style="animation-delay: 1.8s"/>
-  <circle cx="817.8" cy="172.5" r="0.73" fill="#a78bfa" opacity="0.19" class="star-mid" style="animation-delay: 3.5s"/>
-  <circle cx="427.4" cy="250.2" r="0.49" fill="#ffffff" opacity="0.32" class="star-mid" style="animation-delay: 0.4s"/>
-  <circle cx="63.0" cy="252.8" r="0.64" fill="#22d3ee" opacity="0.28" class="star-mid" style="animation-delay: 0.2s"/>
-  <circle cx="74.7" cy="194.7" r="0.74" fill="#a78bfa" opacity="0.34" class="star-mid" style="animation-delay: 1.2s"/>
-  <circle cx="606.2" cy="75.8" r="0.64" fill="#a78bfa" opacity="0.26" class="star-mid" style="animation-delay: 5.6s"/>
-  <circle cx="790.1" cy="10.6" r="0.77" fill="#ffffff" opacity="0.19" class="star-mid" style="animation-delay: 1.3s"/>
-  <circle cx="228.2" cy="273.0" r="0.93" fill="#22d3ee" opacity="0.24" class="star-mid" style="animation-delay: 0.9s"/>
-  <circle cx="704.7" cy="207.8" r="0.77" fill="#ffffff" opacity="0.29" class="star-mid" style="animation-delay: 3.3s"/>
-  <circle cx="786.8" cy="37.4" r="0.93" fill="#a78bfa" opacity="0.20" class="star-mid" style="animation-delay: 0.6s"/>
-  <circle cx="469.6" cy="85.3" r="0.76" fill="#a78bfa" opacity="0.21" class="star-mid" style="animation-delay: 3.8s"/>
-  <circle cx="227.2" cy="146.7" r="0.94" fill="#ffffff" opacity="0.19" class="star-mid" style="animation-delay: 2.5s"/>
-  <circle cx="237.9" cy="9.0" r="0.86" fill="#a78bfa" opacity="0.20" class="star-mid" style="animation-delay: 2.7s"/>
-  <circle cx="597.3" cy="167.3" r="0.47" fill="#22d3ee" opacity="0.43" class="star-fg" style="animation-delay: 5.0s"/>
-  <circle cx="494.1" cy="50.1" r="0.48" fill="#a78bfa" opacity="0.38" class="star-fg" style="animation-delay: 5.6s"/>
-  <circle cx="820.7" cy="19.3" r="0.61" fill="#22d3ee" opacity="0.46" class="star-fg" style="animation-delay: 2.1s"/>
-  <circle cx="475.2" cy="256.4" r="0.98" fill="#22d3ee" opacity="0.53" class="star-fg" style="animation-delay: 1.4s"/>
-  <circle cx="142.2" cy="235.2" r="0.51" fill="#fbbf24" opacity="0.28" class="star-fg" style="animation-delay: 4.4s"/>
-  <circle cx="284.4" cy="272.4" r="0.88" fill="#22d3ee" opacity="0.35" class="star-fg" style="animation-delay: 4.7s"/>
-  <circle cx="96.6" cy="255.7" r="0.92" fill="#22d3ee" opacity="0.33" class="star-fg" style="animation-delay: 5.5s"/>
-  <circle cx="299.0" cy="241.0" r="0.92" fill="#22d3ee" opacity="0.28" class="star-fg" style="animation-delay: 1.2s"/>
-  <circle cx="281.1" cy="253.5" r="0.98" fill="#a78bfa" opacity="0.37" class="star-fg" style="animation-delay: 3.1s"/>
-  <circle cx="575.4" cy="247.6" r="0.60" fill="#ffffff" opacity="0.31" class="star-fg" style="animation-delay: 5.8s"/>
-  <circle cx="155.6" cy="281.4" r="0.56" fill="#ffffff" opacity="0.44" class="star-fg" style="animation-delay: 2.1s"/>
-  <circle cx="665.0" cy="131.9" r="0.99" fill="#ffffff" opacity="0.38" class="star-fg" style="animation-delay: 3.5s"/>
-  <circle cx="219.5" cy="209.3" r="0.40" fill="#22d3ee" opacity="0.38" class="star-fg" style="animation-delay: 0.4s"/>
-  <circle cx="562.6" cy="101.8" r="0.59" fill="#ffffff" opacity="0.47" class="star-fg" style="animation-delay: 1.8s"/>
-  <circle cx="265.2" cy="124.0" r="0.64" fill="#a78bfa" opacity="0.43" class="star-fg" style="animation-delay: 1.2s"/>
-  <circle cx="563.2" cy="115.7" r="0.85" fill="#22d3ee" opacity="0.44" class="star-fg" style="animation-delay: 1.8s"/>
-  <circle cx="465.2" cy="8.1" r="0.57" fill="#fbbf24" opacity="0.49" class="star-fg" style="animation-delay: 3.6s"/>
-  <circle cx="276.0" cy="133.5" r="0.81" fill="#fbbf24" opacity="0.49" class="star-fg" style="animation-delay: 5.8s"/>
-  <circle cx="622.7" cy="195.1" r="0.57" fill="#a78bfa" opacity="0.30" class="star-fg" style="animation-delay: 5.7s"/>
-  <circle cx="202.8" cy="96.2" r="0.88" fill="#22d3ee" opacity="0.28" class="star-fg" style="animation-delay: 1.5s"/>
-  <circle cx="404.2" cy="249.3" r="0.44" fill="#fbbf24" opacity="0.52" class="star-fg" style="animation-delay: 3.5s"/>
-  <circle cx="608.0" cy="117.0" r="0.64" fill="#22d3ee" opacity="0.46" class="star-fg" style="animation-delay: 0.0s"/>
-  <circle cx="635.3" cy="226.7" r="0.46" fill="#fbbf24" opacity="0.34" class="star-fg" style="animation-delay: 4.8s"/>
-  <circle cx="589.2" cy="139.9" r="0.73" fill="#ffffff" opacity="0.40" class="star-fg" style="animation-delay: 4.8s"/>
+  <circle cx="771.2" cy="169.1" r="0.83" fill="#22d3ee" opacity="0.29" class="star-mid" style="animation-delay: 2.4s"/>
+  <circle cx="772.4" cy="138.3" r="0.56" fill="#22d3ee" opacity="0.31" class="star-mid" style="animation-delay: 3.2s"/>
+  <circle cx="632.0" cy="129.7" r="0.75" fill="#a78bfa" opacity="0.21" class="star-mid" style="animation-delay: 6.0s"/>
+  <circle cx="433.0" cy="33.8" r="0.43" fill="#ffffff" opacity="0.20" class="star-mid" style="animation-delay: 1.0s"/>
+  <circle cx="576.2" cy="177.4" r="0.63" fill="#fbbf24" opacity="0.27" class="star-mid" style="animation-delay: 5.8s"/>
+  <circle cx="727.3" cy="11.3" r="0.83" fill="#a78bfa" opacity="0.31" class="star-mid" style="animation-delay: 2.0s"/>
+  <circle cx="252.0" cy="52.9" r="0.40" fill="#a78bfa" opacity="0.35" class="star-mid" style="animation-delay: 4.6s"/>
+  <circle cx="431.4" cy="38.2" r="0.78" fill="#22d3ee" opacity="0.20" class="star-mid" style="animation-delay: 4.6s"/>
+  <circle cx="458.0" cy="229.1" r="0.72" fill="#ffffff" opacity="0.28" class="star-mid" style="animation-delay: 2.9s"/>
+  <circle cx="99.7" cy="111.1" r="0.99" fill="#a78bfa" opacity="0.22" class="star-mid" style="animation-delay: 1.4s"/>
+  <circle cx="481.4" cy="30.4" r="0.84" fill="#ffffff" opacity="0.35" class="star-mid" style="animation-delay: 3.2s"/>
+  <circle cx="111.4" cy="195.4" r="0.97" fill="#22d3ee" opacity="0.22" class="star-mid" style="animation-delay: 5.2s"/>
+  <circle cx="360.6" cy="68.2" r="0.72" fill="#22d3ee" opacity="0.47" class="star-fg" style="animation-delay: 2.4s"/>
+  <circle cx="568.9" cy="114.1" r="0.94" fill="#fbbf24" opacity="0.31" class="star-fg" style="animation-delay: 1.3s"/>
+  <circle cx="289.3" cy="175.1" r="0.54" fill="#22d3ee" opacity="0.28" class="star-fg" style="animation-delay: 4.2s"/>
+  <circle cx="55.3" cy="27.1" r="0.42" fill="#a78bfa" opacity="0.29" class="star-fg" style="animation-delay: 1.4s"/>
+  <circle cx="566.6" cy="68.8" r="0.48" fill="#fbbf24" opacity="0.34" class="star-fg" style="animation-delay: 2.8s"/>
+  <circle cx="347.1" cy="34.8" r="0.80" fill="#a78bfa" opacity="0.39" class="star-fg" style="animation-delay: 2.8s"/>
+  <circle cx="617.0" cy="199.2" r="0.99" fill="#ffffff" opacity="0.29" class="star-fg" style="animation-delay: 4.4s"/>
+  <circle cx="676.9" cy="39.0" r="0.51" fill="#fbbf24" opacity="0.31" class="star-fg" style="animation-delay: 1.1s"/>
+  <circle cx="393.7" cy="256.4" r="0.45" fill="#ffffff" opacity="0.29" class="star-fg" style="animation-delay: 6.0s"/>
+  <circle cx="706.6" cy="283.2" r="0.96" fill="#22d3ee" opacity="0.32" class="star-fg" style="animation-delay: 2.9s"/>
+  <circle cx="185.1" cy="121.9" r="0.44" fill="#fbbf24" opacity="0.28" class="star-fg" style="animation-delay: 2.3s"/>
+  <circle cx="782.4" cy="231.0" r="0.57" fill="#fbbf24" opacity="0.32" class="star-fg" style="animation-delay: 1.8s"/>
   <line x1="110" y1="28" x2="128" y2="34" stroke="url(#shoot-grad)" stroke-width="1.4" stroke-linecap="round" class="shooting-star" style="animation-delay: 0.0s; --tx: 205px; --ty: 80px; animation-duration: 6.5s"/>
   <line x1="660" y1="22" x2="678" y2="28" stroke="url(#shoot-grad)" stroke-width="1.4" stroke-linecap="round" class="shooting-star" style="animation-delay: 2.5s; --tx: 185px; --ty: 72px; animation-duration: 8.5s"/>
   <path d="M 447.6 137.4 Q 447.6 137.4 448.6 137.8 Q 448.6 137.8 449.6 138.2 Q 449.6 138.2 450.6 138.7 Q 450.6 138.7 451.5 139.2 Q 451.5 139.2 452.5 139.7 Q 452.5 139.7 453.5 140.3 Q 453.5 140.3 454.5 140.9 Q 454.5 140.9 455.4 141.6 Q 455.4 141.6 456.4 142.3 Q 456.4 142.3 457.3 143.0 Q 457.3 143.0 458.2 143.7 Q 458.2 143.7 459.2 144.5 Q 459.2 144.5 460.1 145.4 Q 460.1 145.4 461.0 146.3 Q 461.0 146.3 461.8 147.2 Q 461.8 147.2 462.7 148.1 Q 462.7 148.1 463.5 149.1 Q 463.5 149.1 464.4 150.2 Q 464.4 150.2 465.2 151.2 Q 465.2 151.2 466.0 152.3 Q 466.0 152.3 466.7 153.5 Q 466.7 153.5 467.4 154.7 Q 467.4 154.7 468.2 155.9 Q 468.2 155.9 468.8 157.1 Q 468.8 157.1 469.5 158.4 Q 469.5 158.4 470.1 159.8 Q 470.1 159.8 470.7 161.1 Q 470.7 161.1 471.2 162.5 Q 471.2 162.5 471.8 164.0 Q 471.8 164.0 472.2 165.5 Q 472.2 165.5 472.7 167.0 Q 472.7 167.0 473.1 168.5 Q 473.1 168.5 473.4 170.1 Q 473.4 170.1 473.7 171.7 Q 473.7 171.7 474.0 173.3 Q 474.0 173.3 474.2 175.0 Q 474.2 175.0 474.4 176.7 Q 474.4 176.7 474.5 178.4 Q 474.5 178.4 474.6 180.1 Q 474.6 180.1 474.7 181.9" fill="none" stroke="#22d3ee" stroke-width="2.0" opacity="0.55" stroke-linecap="round"/>
@@ -121,19 +85,19 @@
     <animateMotion dur="14s" begin="0s" repeatCount="indefinite" path="M 447.6 137.4 Q 447.6 137.4 448.4 137.7 Q 448.4 137.7 449.1 138.0 Q 449.1 138.0 449.9 138.3 Q 449.9 138.3 450.6 138.7 Q 450.6 138.7 451.4 139.1 Q 451.4 139.1 452.1 139.5 Q 452.1 139.5 452.8 139.9 Q 452.8 139.9 453.6 140.4 Q 453.6 140.4 454.3 140.8 Q 454.3 140.8 455.0 141.3 Q 455.0 141.3 455.8 141.8 Q 455.8 141.8 456.5 142.4 Q 456.5 142.4 457.2 142.9 Q 457.2 142.9 457.9 143.5 Q 457.9 143.5 458.6 144.1 Q 458.6 144.1 459.3 144.7 Q 459.3 144.7 460.0 145.3 Q 460.0 145.3 460.7 146.0 Q 460.7 146.0 461.4 146.7 Q 461.4 146.7 462.0 147.4 Q 462.0 147.4 462.7 148.1 Q 462.7 148.1 463.3 148.9 Q 463.3 148.9 464.0 149.7 Q 464.0 149.7 464.6 150.5 Q 464.6 150.5 465.2 151.3 Q 465.2 151.3 465.8 152.1 Q 465.8 152.1 466.4 153.0 Q 466.4 153.0 467.0 153.9 Q 467.0 153.9 467.5 154.8 Q 467.5 154.8 468.1 155.7 Q 468.1 155.7 468.6 156.7 Q 468.6 156.7 469.1 157.6 Q 469.1 157.6 469.6 158.6 Q 469.6 158.6 470.0 159.6 Q 470.0 159.6 470.5 160.7 Q 470.5 160.7 470.9 161.7 Q 470.9 161.7 471.3 162.8 Q 471.3 162.8 471.7 163.9 Q 471.7 163.9 472.1 165.0 Q 472.1 165.0 472.4 166.2 Q 472.4 166.2 472.8 167.3 Q 472.8 167.3 473.1 168.5 Q 473.1 168.5 473.4 169.7 Q 473.4 169.7 473.6 170.9 Q 473.6 170.9 473.8 172.1 Q 473.8 172.1 474.0 173.4 Q 474.0 173.4 474.2 174.6 Q 474.2 174.6 474.4 175.9 Q 474.4 175.9 474.5 177.2 Q 474.5 177.2 474.6 178.5 Q 474.6 178.5 474.6 179.9 Q 474.6 179.9 474.6 181.2 Q 474.6 181.2 474.6 182.6 Q 474.6 182.6 474.6 183.9 Q 474.6 183.9 474.6 185.3 Q 474.6 185.3 474.5 186.7 Q 474.5 186.7 474.3 188.1 Q 474.3 188.1 474.2 189.5 Q 474.2 189.5 474.0 190.9 Q 474.0 190.9 473.7 192.4 Q 473.7 192.4 473.5 193.8 Q 473.5 193.8 473.2 195.3 Q 473.2 195.3 472.8 196.7 Q 472.8 196.7 472.4 198.2 Q 472.4 198.2 472.0 199.7 Q 472.0 199.7 471.6 201.1 Q 471.6 201.1 471.1 202.6 Q 471.1 202.6 470.6 204.1 Q 470.6 204.1 470.0 205.6 Q 470.0 205.6 469.4 207.1 Q 469.4 207.1 468.7 208.6 Q 468.7 208.6 468.0 210.1 Q 468.0 210.1 467.3 211.5 Q 467.3 211.5 466.5 213.0 Q 466.5 213.0 465.7 214.5 Q 465.7 214.5 464.9 216.0 Q 464.9 216.0 464.0 217.5 Q 464.0 217.5 463.0 218.9 Q 463.0 218.9 462.0 220.4 Q 462.0 220.4 461.0 221.8 Q 461.0 221.8 459.9 223.3 Q 459.9 223.3 458.8 224.7 Q 458.8 224.7 457.6 226.1 Q 457.6 226.1 456.4 227.5 Q 456.4 227.5 455.2 228.9 Q 455.2 228.9 453.9 230.3 Q 453.9 230.3 452.6 231.6 Q 452.6 231.6 451.2 233.0 Q 451.2 233.0 449.7 234.3 Q 449.7 234.3 448.3 235.6 Q 448.3 235.6 446.8 236.9 Q 446.8 236.9 445.2 238.2 Q 445.2 238.2 443.6 239.4 Q 443.6 239.4 441.9 240.6 Q 441.9 240.6 440.3 241.8 Q 440.3 241.8 438.5 242.9 Q 438.5 242.9 436.7 244.1 Q 436.7 244.1 434.9 245.2 Q 434.9 245.2 433.0 246.2 Q 433.0 246.2 431.1 247.3 Q 431.1 247.3 429.2 248.3 Q 429.2 248.3 427.2 249.2 Q 427.2 249.2 425.1 250.2 Q 425.1 250.2 423.1 251.1 Q 423.1 251.1 420.9 251.9 Q 420.9 251.9 418.8 252.7 Q 418.8 252.7 416.6 253.5 Q 416.6 253.5 414.3 254.2 Q 414.3 254.2 412.1 254.9 Q 412.1 254.9 409.7 255.5 Q 409.7 255.5 407.4 256.1 Q 407.4 256.1 405.0 256.7 Q 405.0 256.7 402.6 257.1 Q 402.6 257.1 400.1 257.6 Q 400.1 257.6 397.6 258.0 Q 397.6 258.0 395.1 258.3 Q 395.1 258.3 392.5 258.6 Q 392.5 258.6 389.9 258.8 Q 389.9 258.8 387.3 259.0 Q 387.3 259.0 384.6 259.1 Q 384.6 259.1 381.9 259.1 Q 381.9 259.1 379.2 259.1 Q 379.2 259.1 376.5 259.0 Q 376.5 259.0 373.7 258.9 Q 373.7 258.9 370.9 258.6 Q 370.9 258.6 368.1 258.4 Q 368.1 258.4 365.3 258.0 Q 365.3 258.0 362.4 257.6 Q 362.4 257.6 359.6 257.1 Q 359.6 257.1 356.7 256.6 Q 356.7 256.6 353.8 255.9 Q 353.8 255.9 350.9 255.2 Q 350.9 255.2 347.9 254.5 Q 347.9 254.5 345.0 253.6 Q 345.0 253.6 342.1 252.7 Q 342.1 252.7 339.1 251.7 Q 339.1 251.7 336.1 250.6 Q 336.1 250.6 333.2 249.5 Q 333.2 249.5 330.2 248.2 Q 330.2 248.2 327.2 246.9"/>
     <animate attributeName="opacity" values="0;0.75;0.3;0" dur="14s" begin="0s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="470.5" cy="160.7" r="2.6" fill="#22d3ee" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="0.0s" repeatCount="indefinite"/></circle>
+  <circle cx="470.5" cy="160.7" r="2.6" fill="#22d3ee" opacity="0.9"/>
   <line x1="470.5" y1="160.7" x2="492.5" y2="160.9" stroke="#22d3ee" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>
   <text x="496.5" y="163.9" text-anchor="start" fill="#22d3ee" font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">Python</text>
   <text x="496.5" y="163.9" text-anchor="start" fill="#22d3ee" font-size="9.5" font-family="monospace" opacity="0.9">Python</text>
-  <circle cx="471.9" cy="200.2" r="2.6" fill="#22d3ee" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="0.5s" repeatCount="indefinite"/></circle>
+  <circle cx="471.9" cy="200.2" r="2.6" fill="#22d3ee" opacity="0.9"/>
   <line x1="471.9" y1="200.2" x2="488.6" y2="208.0" stroke="#22d3ee" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>
   <text x="492.6" y="211.0" text-anchor="start" fill="#22d3ee" font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">PyTorch</text>
   <text x="492.6" y="211.0" text-anchor="start" fill="#22d3ee" font-size="9.5" font-family="monospace" opacity="0.9">PyTorch</text>
-  <circle cx="439.1" cy="242.6" r="2.6" fill="#22d3ee" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="1.0s" repeatCount="indefinite"/></circle>
+  <circle cx="439.1" cy="242.6" r="2.6" fill="#22d3ee" opacity="0.9"/>
   <line x1="439.1" y1="242.6" x2="442.8" y2="254.4" stroke="#22d3ee" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>
   <text x="438.8" y="257.4" text-anchor="end" fill="#22d3ee" font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">TensorFlow</text>
   <text x="438.8" y="257.4" text-anchor="end" fill="#22d3ee" font-size="9.5" font-family="monospace" opacity="0.9">TensorFlow</text>
-  <circle cx="368.1" cy="258.4" r="2.6" fill="#22d3ee" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="1.5s" repeatCount="indefinite"/></circle>
+  <circle cx="368.1" cy="258.4" r="2.6" fill="#22d3ee" opacity="0.9"/>
   <line x1="368.1" y1="258.4" x2="357.1" y2="268.8" stroke="#22d3ee" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>
   <text x="353.1" y="271.8" text-anchor="end" fill="#22d3ee" font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">LLM</text>
   <text x="353.1" y="271.8" text-anchor="end" fill="#22d3ee" font-size="9.5" font-family="monospace" opacity="0.9">LLM</text>
@@ -144,19 +108,19 @@
     <animateMotion dur="16s" begin="0s" repeatCount="indefinite" path="M 433.3 190.9 Q 433.3 190.9 432.6 191.4 Q 432.6 191.4 432.0 191.9 Q 432.0 191.9 431.3 192.4 Q 431.3 192.4 430.6 192.8 Q 430.6 192.8 429.9 193.3 Q 429.9 193.3 429.2 193.7 Q 429.2 193.7 428.5 194.2 Q 428.5 194.2 427.7 194.6 Q 427.7 194.6 426.9 195.0 Q 426.9 195.0 426.2 195.4 Q 426.2 195.4 425.4 195.7 Q 425.4 195.7 424.5 196.1 Q 424.5 196.1 423.7 196.4 Q 423.7 196.4 422.8 196.8 Q 422.8 196.8 422.0 197.1 Q 422.0 197.1 421.1 197.4 Q 421.1 197.4 420.2 197.7 Q 420.2 197.7 419.3 197.9 Q 419.3 197.9 418.3 198.2 Q 418.3 198.2 417.4 198.4 Q 417.4 198.4 416.4 198.6 Q 416.4 198.6 415.5 198.8 Q 415.5 198.8 414.5 198.9 Q 414.5 198.9 413.5 199.1 Q 413.5 199.1 412.4 199.2 Q 412.4 199.2 411.4 199.3 Q 411.4 199.3 410.4 199.4 Q 410.4 199.4 409.3 199.4 Q 409.3 199.4 408.3 199.4 Q 408.3 199.4 407.2 199.4 Q 407.2 199.4 406.1 199.4 Q 406.1 199.4 405.0 199.4 Q 405.0 199.4 403.9 199.3 Q 403.9 199.3 402.8 199.2 Q 402.8 199.2 401.7 199.1 Q 401.7 199.1 400.5 198.9 Q 400.5 198.9 399.4 198.7 Q 399.4 198.7 398.2 198.5 Q 398.2 198.5 397.1 198.3 Q 397.1 198.3 395.9 198.0 Q 395.9 198.0 394.8 197.7 Q 394.8 197.7 393.6 197.4 Q 393.6 197.4 392.4 197.0 Q 392.4 197.0 391.3 196.6 Q 391.3 196.6 390.1 196.2 Q 390.1 196.2 388.9 195.8 Q 388.9 195.8 387.7 195.3 Q 387.7 195.3 386.5 194.8 Q 386.5 194.8 385.4 194.2 Q 385.4 194.2 384.2 193.7 Q 384.2 193.7 383.0 193.0 Q 383.0 193.0 381.8 192.4 Q 381.8 192.4 380.6 191.7 Q 380.6 191.7 379.5 191.0 Q 379.5 191.0 378.3 190.3 Q 378.3 190.3 377.2 189.5 Q 377.2 189.5 376.0 188.7 Q 376.0 188.7 374.9 187.8 Q 374.9 187.8 373.7 186.9 Q 373.7 186.9 372.6 186.0 Q 372.6 186.0 371.5 185.1 Q 371.5 185.1 370.4 184.1 Q 370.4 184.1 369.3 183.0 Q 369.3 183.0 368.2 182.0 Q 368.2 182.0 367.1 180.9 Q 367.1 180.9 366.1 179.8 Q 366.1 179.8 365.0 178.6 Q 365.0 178.6 364.0 177.4 Q 364.0 177.4 363.0 176.2 Q 363.0 176.2 362.0 174.9 Q 362.0 174.9 361.1 173.6 Q 361.1 173.6 360.1 172.2 Q 360.1 172.2 359.2 170.9 Q 359.2 170.9 358.3 169.5 Q 358.3 169.5 357.4 168.0 Q 357.4 168.0 356.6 166.5 Q 356.6 166.5 355.8 165.0 Q 355.8 165.0 355.0 163.5 Q 355.0 163.5 354.2 161.9 Q 354.2 161.9 353.5 160.3 Q 353.5 160.3 352.7 158.6 Q 352.7 158.6 352.1 156.9 Q 352.1 156.9 351.4 155.2 Q 351.4 155.2 350.8 153.5 Q 350.8 153.5 350.2 151.7 Q 350.2 151.7 349.7 149.9 Q 349.7 149.9 349.2 148.0 Q 349.2 148.0 348.7 146.2 Q 348.7 146.2 348.3 144.3 Q 348.3 144.3 347.9 142.4 Q 347.9 142.4 347.5 140.4 Q 347.5 140.4 347.2 138.4 Q 347.2 138.4 347.0 136.4 Q 347.0 136.4 346.7 134.4 Q 346.7 134.4 346.5 132.3 Q 346.5 132.3 346.4 130.2 Q 346.4 130.2 346.3 128.1 Q 346.3 128.1 346.3 126.0 Q 346.3 126.0 346.3 123.8 Q 346.3 123.8 346.4 121.7 Q 346.4 121.7 346.5 119.5 Q 346.5 119.5 346.6 117.3 Q 346.6 117.3 346.8 115.0 Q 346.8 115.0 347.1 112.8 Q 347.1 112.8 347.4 110.5 Q 347.4 110.5 347.8 108.2 Q 347.8 108.2 348.3 106.0 Q 348.3 106.0 348.7 103.7 Q 348.7 103.7 349.3 101.3 Q 349.3 101.3 349.9 99.0 Q 349.9 99.0 350.6 96.7 Q 350.6 96.7 351.3 94.3 Q 351.3 94.3 352.1 92.0 Q 352.1 92.0 352.9 89.6 Q 352.9 89.6 353.9 87.3 Q 353.9 87.3 354.8 84.9 Q 354.8 84.9 355.9 82.6 Q 355.9 82.6 357.0 80.2 Q 357.0 80.2 358.2 77.9 Q 358.2 77.9 359.4 75.5 Q 359.4 75.5 360.7 73.2 Q 360.7 73.2 362.1 70.8 Q 362.1 70.8 363.5 68.5 Q 363.5 68.5 365.0 66.2 Q 365.0 66.2 366.6 63.9 Q 366.6 63.9 368.2 61.6 Q 368.2 61.6 370.0 59.3 Q 370.0 59.3 371.7 57.0 Q 371.7 57.0 373.6 54.8 Q 373.6 54.8 375.5 52.6 Q 375.5 52.6 377.5 50.4 Q 377.5 50.4 379.6 48.2 Q 379.6 48.2 381.7 46.0 Q 381.7 46.0 383.9 43.9 Q 383.9 43.9 386.2 41.8 Q 386.2 41.8 388.5 39.8 Q 388.5 39.8 391.0 37.7 Q 391.0 37.7 393.4 35.7 Q 393.4 35.7 396.0 33.8 Q 396.0 33.8 398.6 31.9"/>
     <animate attributeName="opacity" values="0;0.75;0.3;0" dur="16s" begin="0s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="401.7" cy="199.1" r="2.6" fill="#a78bfa" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="0.0s" repeatCount="indefinite"/></circle>
+  <circle cx="401.7" cy="199.1" r="2.6" fill="#a78bfa" opacity="0.9"/>
   <line x1="401.7" y1="199.1" x2="390.4" y2="209.4" stroke="#a78bfa" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>
   <text x="386.4" y="212.4" text-anchor="end" fill="#a78bfa" font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">Django</text>
   <text x="386.4" y="212.4" text-anchor="end" fill="#a78bfa" font-size="9.5" font-family="monospace" opacity="0.9">Django</text>
-  <circle cx="366.8" cy="180.5" r="2.6" fill="#a78bfa" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="0.5s" repeatCount="indefinite"/></circle>
+  <circle cx="366.8" cy="180.5" r="2.6" fill="#a78bfa" opacity="0.9"/>
   <line x1="366.8" y1="180.5" x2="346.0" y2="184.5" stroke="#a78bfa" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>
   <text x="342.0" y="187.5" text-anchor="end" fill="#a78bfa" font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">Vue</text>
   <text x="342.0" y="187.5" text-anchor="end" fill="#a78bfa" font-size="9.5" font-family="monospace" opacity="0.9">Vue</text>
-  <circle cx="346.5" cy="130.9" r="2.6" fill="#a78bfa" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="1.0s" repeatCount="indefinite"/></circle>
+  <circle cx="346.5" cy="130.9" r="2.6" fill="#a78bfa" opacity="0.9"/>
   <line x1="346.5" y1="130.9" x2="325.8" y2="126.8" stroke="#a78bfa" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>
   <text x="321.8" y="129.8" text-anchor="end" fill="#a78bfa" font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">JavaScript</text>
   <text x="321.8" y="129.8" text-anchor="end" fill="#a78bfa" font-size="9.5" font-family="monospace" opacity="0.9">JavaScript</text>
-  <circle cx="368.2" cy="61.6" r="2.6" fill="#a78bfa" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="1.5s" repeatCount="indefinite"/></circle>
+  <circle cx="368.2" cy="61.6" r="2.6" fill="#a78bfa" opacity="0.9"/>
   <line x1="368.2" y1="61.6" x2="357.3" y2="51.2" stroke="#a78bfa" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>
   <text x="353.3" y="54.2" text-anchor="end" fill="#a78bfa" font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">SQL</text>
   <text x="353.3" y="54.2" text-anchor="end" fill="#a78bfa" font-size="9.5" font-family="monospace" opacity="0.9">SQL</text>
@@ -167,19 +131,19 @@
     <animateMotion dur="18s" begin="0s" repeatCount="indefinite" path="M 394.1 151.7 Q 394.1 151.7 394.0 150.9 Q 394.0 150.9 393.9 150.1 Q 393.9 150.1 393.8 149.3 Q 393.8 149.3 393.7 148.5 Q 393.7 148.5 393.7 147.6 Q 393.7 147.6 393.7 146.8 Q 393.7 146.8 393.7 145.9 Q 393.7 145.9 393.7 145.1 Q 393.7 145.1 393.7 144.2 Q 393.7 144.2 393.8 143.3 Q 393.8 143.3 393.9 142.4 Q 393.9 142.4 394.0 141.5 Q 394.0 141.5 394.1 140.6 Q 394.1 140.6 394.2 139.7 Q 394.2 139.7 394.4 138.8 Q 394.4 138.8 394.6 137.9 Q 394.6 137.9 394.8 137.0 Q 394.8 137.0 395.0 136.1 Q 395.0 136.1 395.3 135.1 Q 395.3 135.1 395.6 134.2 Q 395.6 134.2 395.9 133.3 Q 395.9 133.3 396.2 132.3 Q 396.2 132.3 396.6 131.4 Q 396.6 131.4 396.9 130.5 Q 396.9 130.5 397.3 129.5 Q 397.3 129.5 397.8 128.6 Q 397.8 128.6 398.2 127.7 Q 398.2 127.7 398.7 126.7 Q 398.7 126.7 399.2 125.8 Q 399.2 125.8 399.8 124.9 Q 399.8 124.9 400.3 123.9 Q 400.3 123.9 400.9 123.0 Q 400.9 123.0 401.5 122.1 Q 401.5 122.1 402.2 121.2 Q 402.2 121.2 402.8 120.3 Q 402.8 120.3 403.5 119.4 Q 403.5 119.4 404.3 118.5 Q 404.3 118.5 405.0 117.6 Q 405.0 117.6 405.8 116.7 Q 405.8 116.7 406.6 115.8 Q 406.6 115.8 407.5 115.0 Q 407.5 115.0 408.3 114.1 Q 408.3 114.1 409.2 113.3 Q 409.2 113.3 410.1 112.5 Q 410.1 112.5 411.1 111.6 Q 411.1 111.6 412.1 110.8 Q 412.1 110.8 413.1 110.1 Q 413.1 110.1 414.1 109.3 Q 414.1 109.3 415.2 108.5 Q 415.2 108.5 416.3 107.8 Q 416.3 107.8 417.4 107.1 Q 417.4 107.1 418.5 106.4 Q 418.5 106.4 419.7 105.7 Q 419.7 105.7 420.9 105.1 Q 420.9 105.1 422.1 104.4 Q 422.1 104.4 423.4 103.8 Q 423.4 103.8 424.7 103.2 Q 424.7 103.2 426.0 102.7 Q 426.0 102.7 427.3 102.1 Q 427.3 102.1 428.7 101.6 Q 428.7 101.6 430.1 101.1 Q 430.1 101.1 431.5 100.7 Q 431.5 100.7 432.9 100.2 Q 432.9 100.2 434.4 99.8 Q 434.4 99.8 435.8 99.4 Q 435.8 99.4 437.3 99.1 Q 437.3 99.1 438.9 98.8 Q 438.9 98.8 440.4 98.5 Q 440.4 98.5 442.0 98.2 Q 442.0 98.2 443.6 98.0 Q 443.6 98.0 445.2 97.8 Q 445.2 97.8 446.8 97.7 Q 446.8 97.7 448.5 97.6 Q 448.5 97.6 450.2 97.5 Q 450.2 97.5 451.8 97.5 Q 451.8 97.5 453.6 97.5 Q 453.6 97.5 455.3 97.5 Q 455.3 97.5 457.0 97.6 Q 457.0 97.6 458.8 97.7 Q 458.8 97.7 460.5 97.9 Q 460.5 97.9 462.3 98.1 Q 462.3 98.1 464.1 98.4 Q 464.1 98.4 465.9 98.7 Q 465.9 98.7 467.8 99.0 Q 467.8 99.0 469.6 99.4 Q 469.6 99.4 471.4 99.8 Q 471.4 99.8 473.3 100.3 Q 473.3 100.3 475.1 100.8 Q 475.1 100.8 477.0 101.4 Q 477.0 101.4 478.8 102.0 Q 478.8 102.0 480.7 102.7 Q 480.7 102.7 482.6 103.4 Q 482.6 103.4 484.5 104.2 Q 484.5 104.2 486.3 105.0 Q 486.3 105.0 488.2 105.9 Q 488.2 105.9 490.1 106.8 Q 490.1 106.8 491.9 107.8 Q 491.9 107.8 493.8 108.8 Q 493.8 108.8 495.7 109.9 Q 495.7 109.9 497.5 111.1 Q 497.5 111.1 499.4 112.3 Q 499.4 112.3 501.2 113.5 Q 501.2 113.5 503.0 114.8 Q 503.0 114.8 504.8 116.2 Q 504.8 116.2 506.6 117.6 Q 506.6 117.6 508.4 119.0 Q 508.4 119.0 510.2 120.6 Q 510.2 120.6 511.9 122.1 Q 511.9 122.1 513.7 123.8 Q 513.7 123.8 515.4 125.5 Q 515.4 125.5 517.0 127.2 Q 517.0 127.2 518.7 129.0 Q 518.7 129.0 520.4 130.9 Q 520.4 130.9 522.0 132.8 Q 522.0 132.8 523.5 134.8 Q 523.5 134.8 525.1 136.8 Q 525.1 136.8 526.6 138.9 Q 526.6 138.9 528.1 141.0 Q 528.1 141.0 529.6 143.2 Q 529.6 143.2 531.0 145.4 Q 531.0 145.4 532.4 147.7 Q 532.4 147.7 533.7 150.1 Q 533.7 150.1 535.0 152.5 Q 535.0 152.5 536.3 155.0 Q 536.3 155.0 537.5 157.5 Q 537.5 157.5 538.6 160.1 Q 538.6 160.1 539.7 162.7 Q 539.7 162.7 540.8 165.4 Q 540.8 165.4 541.8 168.1 Q 541.8 168.1 542.8 170.9 Q 542.8 170.9 543.7 173.7 Q 543.7 173.7 544.6 176.6 Q 544.6 176.6 545.3 179.5 Q 545.3 179.5 546.1 182.5 Q 546.1 182.5 546.8 185.5 Q 546.8 185.5 547.4 188.5 Q 547.4 188.5 547.9 191.7 Q 547.9 191.7 548.4 194.8 Q 548.4 194.8 548.8 198.0 Q 548.8 198.0 549.1 201.2"/>
     <animate attributeName="opacity" values="0;0.75;0.3;0" dur="18s" begin="0s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="402.8" cy="120.3" r="2.6" fill="#fbbf24" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="0.0s" repeatCount="indefinite"/></circle>
+  <circle cx="402.8" cy="120.3" r="2.6" fill="#fbbf24" opacity="0.9"/>
   <line x1="402.8" y1="120.3" x2="392.1" y2="109.8" stroke="#fbbf24" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>
   <text x="388.1" y="112.8" text-anchor="end" fill="#fbbf24" font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">Git</text>
   <text x="388.1" y="112.8" text-anchor="end" fill="#fbbf24" font-size="9.5" font-family="monospace" opacity="0.9">Git</text>
-  <circle cx="436.3" cy="99.3" r="2.6" fill="#fbbf24" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="0.5s" repeatCount="indefinite"/></circle>
+  <circle cx="436.3" cy="99.3" r="2.6" fill="#fbbf24" opacity="0.9"/>
   <line x1="436.3" y1="99.3" x2="440.4" y2="87.5" stroke="#fbbf24" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>
   <text x="436.4" y="90.5" text-anchor="end" fill="#fbbf24" font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">Docker</text>
   <text x="436.4" y="90.5" text-anchor="end" fill="#fbbf24" font-size="9.5" font-family="monospace" opacity="0.9">Docker</text>
-  <circle cx="489.4" cy="106.5" r="2.6" fill="#fbbf24" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="1.0s" repeatCount="indefinite"/></circle>
+  <circle cx="489.4" cy="106.5" r="2.6" fill="#fbbf24" opacity="0.9"/>
   <line x1="489.4" y1="106.5" x2="506.4" y2="98.8" stroke="#fbbf24" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>
   <text x="510.4" y="101.8" text-anchor="start" fill="#fbbf24" font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">Linux</text>
   <text x="510.4" y="101.8" text-anchor="start" fill="#fbbf24" font-size="9.5" font-family="monospace" opacity="0.9">Linux</text>
-  <circle cx="538.6" cy="160.1" r="2.6" fill="#fbbf24" opacity="0.9"><animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="1.5s" repeatCount="indefinite"/></circle>
+  <circle cx="538.6" cy="160.1" r="2.6" fill="#fbbf24" opacity="0.9"/>
   <line x1="538.6" y1="160.1" x2="560.6" y2="160.1" stroke="#fbbf24" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>
   <text x="564.6" y="163.1" text-anchor="start" fill="#fbbf24" font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">GitHub Actions</text>
   <text x="564.6" y="163.1" text-anchor="start" fill="#fbbf24" font-size="9.5" font-family="monospace" opacity="0.9">GitHub Actions</text>
