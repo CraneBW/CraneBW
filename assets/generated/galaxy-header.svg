@@ -193,6 +193,6 @@
   <circle cx="425" cy="160" r="3" fill="#22d3ee" filter="url(#core-bright-glow)" opacity="0.95"/>
   <text x="425" y="165" text-anchor="middle" fill="#22d3ee" font-size="13" font-weight="bold" font-family="monospace">C</text>
   <text x="425" y="27" text-anchor="middle" fill="#e2e8f0" font-size="21" font-weight="bold" font-family="sans-serif">Crane</text>
-  <text x="425" y="46" text-anchor="middle" fill="#94a3b8" font-size="12.5" font-family="sans-serif">AI Security Researcher · Milky Way Lover · AI 安全研究者 · 银河爱好者</text>
+  <text x="425" y="46" text-anchor="middle" fill="#94a3b8" font-size="12.5" font-family="sans-serif">AI Security Researcher · AI 安全研究者</text>
   <text x="425" y="286" text-anchor="middle" fill="#64748b" font-size="11" font-family="monospace" font-style="italic">Chasing stars in code and in the night sky.</text>
 </svg>
