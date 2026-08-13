@@ -461,8 +461,11 @@ def build_repo_cards(cfg, stats):
         add(f'  <circle cx="{x + 16}" cy="28" r="4" fill="{color}"/>')
         add(f'  <text x="{x + 26}" y="32" fill="{T["cyan"]}" font-size="12.5" font-weight="bold" '
             f'font-family="monospace">{esc(r.get("name", ""))}</text>')
-        # 描述(截断 2 行)
-        desc = r.get("description") or "No description"
+        # 描述(截断 2 行;fork 显示上游来源)
+        if r.get("is_fork"):
+            desc = f'Fork of {r.get("parent", "upstream")}'
+        else:
+            desc = r.get("description") or "No description"
         if len(desc) > 34:
             desc = desc[:33] + "…"
         add(f'  <text x="{x + 16}" y="56" fill="{T["text_dim"]}" font-size="10.5" '

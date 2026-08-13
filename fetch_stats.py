@@ -78,6 +78,8 @@ def main():
             "description": (r["description"] or "")[:60],
             "language": r["language"],
             "stars": r["stargazers_count"],
+            "is_fork": r["fork"],
+            "parent": (r.get("parent") or {}).get("full_name", ""),
         }
         for r in candidates[:3]
     ]
