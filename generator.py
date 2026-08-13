@@ -251,17 +251,15 @@ def build_header(cfg):
         ]
         full_pts = []
         for (t0, t1, w, op1, op2) in segs:
+            # 静态透明度(去掉 path opacity 脉动:长曲线逐帧重绘在 Firefox 上开销大)
             d, pts = spiral_path(CX, CY, ac["a"], ac["k"],
                                  ac["theta0"] + t0, ac["theta0"] + t1,
                                  n=40, arm_offset=offset)
             # 使路径方向向外,重采样用于粒子轨迹
             if idx == 0:
                 full_pts = pts
-            dur = 8.0 + idx
             add(f'  <path d="{d}" fill="none" stroke="{color}" stroke-width="{w}" '
-                f'opacity="{op1}" stroke-linecap="round">'
-                f'<animate attributeName="opacity" values="{op2};{op1};{op2}" '
-                f'dur="{dur}s" begin="{idx}s" repeatCount="indefinite"/></path>')
+                f'opacity="{op1}" stroke-linecap="round"/>')
         # 粒子:沿整条螺线流动(animateMotion)
         d_full, _ = spiral_path(CX, CY, ac["a"], ac["k"], ac["theta0"], ac["theta0"] + 3.2,
                                 n=140, arm_offset=offset)
@@ -477,11 +475,10 @@ def build_hero(cfg, photo_path):
         offset = idx * (2 * math.pi / 3) - 0.785
         segs = [(0.0, 1.2, 2.0, 0.55, 0.40), (1.2, 2.4, 1.5, 0.40, 0.28), (2.4, 3.2, 1.1, 0.28, 0.16)]
         for t0, t1, w, op1, op2 in segs:
+            # 静态透明度(去掉 path opacity 脉动:长曲线逐帧重绘在 Firefox 上开销大)
             d, _ = spiral_path(CX, CY, ac["a"], ac["k"], ac["t0"] + t0, ac["t0"] + t1, n=40, arm_offset=offset)
-            dur = 8.0 + idx
             add(f'  <path d="{d}" fill="none" stroke="{color}" stroke-width="{w}" opacity="{op1}" '
-                f'stroke-linecap="round"><animate attributeName="opacity" values="{op2};{op1};{op2}" '
-                f'dur="{dur}s" begin="{idx}s" repeatCount="indefinite"/></path>')
+                f'stroke-linecap="round"/>')
         d_full, _ = spiral_path(CX, CY, ac["a"], ac["k"], ac["t0"], ac["t0"] + 3.2, n=140, arm_offset=offset)
         for p_idx in range(1):
             add(f'  <circle r="1.6" fill="{color}" opacity="0.7">')
