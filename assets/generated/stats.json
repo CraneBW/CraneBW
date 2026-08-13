@@ -5,9 +5,9 @@
   "gists": 0,
   "stars": 1,
   "forks": 0,
-  "year_commits": 357,
+  "year_commits": 358,
   "languages": {
-    "Python": 543015,
+    "Python": 551834,
     "HTML": 155899,
     "JavaScript": 324468,
     "CSS": 126475,
@@ -20,19 +20,25 @@
       "name": "dailyfresh_re",
       "description": "",
       "language": "Python",
-      "stars": 1
+      "stars": 1,
+      "is_fork": false,
+      "parent": ""
     },
     {
       "name": "panda-video-generator",
       "description": "视频自动化引擎: 用程序员的方式帮你自动化视频创作与发布",
       "language": "TypeScript",
-      "stars": 0
+      "stars": 0,
+      "is_fork": true,
+      "parent": ""
     },
     {
       "name": "deep-researcher",
       "description": "export const SPINNER_VERBS = [   'Accomplishing',   'Actioni",
       "language": null,
-      "stars": 0
+      "stars": 0,
+      "is_fork": true,
+      "parent": ""
     }
   ],
   "updated_at": "2026-08-14"
