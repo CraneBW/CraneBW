@@ -20,8 +20,8 @@ B.Sc. Computer Science @ Ningbo University → M.Sc. Cybersec @ NUAA *(incoming)
 🔬 Research in **AI Security** — Adversarial ML · LLM Security
 🔬 研究方向 **AI 安全** — 对抗机器学习 · 大模型安全
 
-📸 Amateur astrophotographer — chasing the Milky Way, one clear night at a time
-📸 天文摄影爱好者 — 追银河的人,逐光而行
+🌌 Milky Way lover — just caught my first galaxy shot this August
+🌌 银河爱好者 — 八月刚拍到第一张银河,还在学习怎么拍
 
 </div>
 
@@ -43,18 +43,18 @@ B.Sc. Computer Science @ Ningbo University → M.Sc. Cybersec @ NUAA *(incoming)
 
 <br/>
 
-### 📸 Photography / 摄影展区
+### 🌌 My Shots / 我的照片
 
 <div align="center">
   <img src="./assets/photos/galaxy.jpg" width="850" alt="The Milky Way, shot by Crane"/>
   <br/>
-  <sub>*The Milky Way over our hometown — shot by me, Aug 2026*</sub>
+  <sub>*The Milky Way — my first galaxy shot, Aug 2026*</sub>
 </div>
 
 <br/>
 
 <div align="center">
-  <b>More shots / 更多作品</b>
+  <b>More shots / 更多照片</b>
   <br/><br/>
   <img src="./assets/photos/lotus.jpg" width="280" alt="公园荷叶 by Crane"/>
   <img src="./assets/photos/park.jpg" width="280" alt="公园 by Crane"/>

@@ -22,11 +22,11 @@
   <text x="313" y="122" fill="#94a3b8" font-size="11" font-family="sans-serif">对抗机器学习 · 大模型安全</text>
   <rect x="570" y="10" width="267" height="148" rx="12" fill="#0e1626" stroke="#1a2332" stroke-width="1"/>
   <rect x="570" y="10" width="3.5" height="148" rx="1.5" fill="#fbbf24" opacity="0.85"/>
-  <text x="592" y="40" font-size="19">📸</text>
-  <text x="620" y="42" fill="#e2e8f0" font-size="14" font-weight="bold" font-family="sans-serif">Photography</text>
-  <text x="708" y="42" fill="#64748b" font-size="11" font-family="sans-serif"> 摄影</text>
-  <text x="592" y="68" fill="#94a3b8" font-size="11" font-family="sans-serif">Astrophotography · Cityscape</text>
-  <text x="592" y="86" fill="#94a3b8" font-size="11" font-family="sans-serif">星野银河 · 城市风光</text>
-  <text x="592" y="104" fill="#94a3b8" font-size="11" font-family="sans-serif">my shots: see gallery below</text>
-  <text x="592" y="122" fill="#94a3b8" font-size="11" font-family="sans-serif">作品见下方摄影展区</text>
+  <text x="592" y="40" font-size="19">🌌</text>
+  <text x="620" y="42" fill="#e2e8f0" font-size="14" font-weight="bold" font-family="sans-serif">Milky Way</text>
+  <text x="692" y="42" fill="#64748b" font-size="11" font-family="sans-serif"> 银河</text>
+  <text x="592" y="68" fill="#94a3b8" font-size="11" font-family="sans-serif">Just a Milky Way lover</text>
+  <text x="592" y="86" fill="#94a3b8" font-size="11" font-family="sans-serif">纯粹喜欢银河的人</text>
+  <text x="592" y="104" fill="#94a3b8" font-size="11" font-family="sans-serif">first shot caught this August</text>
+  <text x="592" y="122" fill="#94a3b8" font-size="11" font-family="sans-serif">八月拍到第一张银河(见下方)</text>
 </svg>
