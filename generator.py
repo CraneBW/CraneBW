@@ -174,6 +174,9 @@ def build_header(cfg):
         15% { opacity: 0.6; transform: translate(var(--tx), var(--ty)); }
         20% { opacity: 0; transform: translate(var(--tx), var(--ty)); }
         100% { opacity: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; }
       }"""
     add(css.replace("__CX__", str(CX)).replace("__CY__", str(CY)))
     add("    </style>")
@@ -208,10 +211,10 @@ def build_header(cfg):
     add(f'  <circle cx="640" cy="180" r="110" fill="{T["amber"]}" opacity="0.014" filter="url(#nebula-outer)"/>')
     add(f'  <circle cx="{CX}" cy="{CY+40}" r="150" fill="{T["cyan"]}" opacity="0.012" filter="url(#nebula-outer)"/>')
 
-    # 3. 星场(三层,固定种子可复现)
+    # 3. 星场(三层,固定种子可复现;数量控制以降低渲染负载)
     star_colors = ["#ffffff", T["cyan"], T["violet"], T["amber"]]
     for layer, base_op in (("star-bg", 0.2), ("star-mid", 0.35), ("star-fg", 0.55)):
-        for _ in range(46):
+        for _ in range(24):
             x = rng.uniform(6, W - 6)
             y = rng.uniform(8, H - 8)
             r = rng.uniform(0.4, 1.0)
@@ -221,11 +224,10 @@ def build_header(cfg):
             add(f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="{r:.2f}" fill="{c}" opacity="{op:.2f}" '
                 f'class="{layer}" style="animation-delay: {delay}s"/>')
 
-    # 4. 流星(3 条,角度各异)
+    # 4. 流星(2 条,角度各异)
     meteors = [
         (110, 28, 205, 80, "0.0s", 6.5),
         (660, 22, 185, 72, "2.5s", 8.5),
-        (395, 268, 165, 62, "5.0s", 7.5),
     ]
     for i, (x1, y1, tx, ty, delay, dur) in enumerate(meteors):
         add(f'  <line x1="{x1}" y1="{y1}" x2="{x1+18}" y2="{y1+6}" stroke="url(#shoot-grad)" '
@@ -263,7 +265,7 @@ def build_header(cfg):
         # 粒子:沿整条螺线流动(animateMotion)
         d_full, _ = spiral_path(CX, CY, ac["a"], ac["k"], ac["theta0"], ac["theta0"] + 3.2,
                                 n=140, arm_offset=offset)
-        for p_idx in range(2):
+        for p_idx in range(1):
             add(f'  <circle r="1.6" fill="{color}" opacity="0.7">')
             add(f'    <animateMotion dur="{14 + idx * 2}s" begin="{p_idx * (6 + idx)}s" '
                 f'repeatCount="indefinite" path="{d_full}"/>')
@@ -407,6 +409,9 @@ def build_hero(cfg, photo_path):
         15% { opacity: 0.6; transform: translate(var(--tx), var(--ty)); }
         20% { opacity: 0; transform: translate(var(--tx), var(--ty)); }
         100% { opacity: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; }
       }"""
     add(css.replace("__CX__", str(CX)).replace("__CY__", str(CY)))
     add("    </style>")
@@ -444,19 +449,19 @@ def build_hero(cfg, photo_path):
     add(f'  <circle cx="{CX-180}" cy="{CY-60}" r="110" fill="{T["violet"]}" opacity="0.10" filter="url(#nebula-outer)"/>')
     add(f'  <circle cx="{CX+190}" cy="{CY+40}" r="100" fill="{T["amber"]}" opacity="0.07" filter="url(#nebula-outer)"/>')
 
-    # 4. 少量闪烁星点缀(照片自带星空,这里补动态星星)
-    for _ in range(22):
+    # 4. 少量闪烁星点缀(照片自带星空,这里补动态星星;数量控制以降低渲染负载)
+    for _ in range(10):
         x = rng.uniform(8, W - 8)
         y = rng.uniform(10, H - 10)
-        r = rng.uniform(0.5, 1.1)
+        r = rng.uniform(0.5, 1.0)
         c = rng.choice(["#ffffff", T["cyan"], T["violet"]])
-        op = rng.uniform(0.4, 0.85)
+        op = rng.uniform(0.4, 0.8)
         delay = round(rng.uniform(0, 2.7), 1)
         add(f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="{r:.2f}" fill="{c}" opacity="{op:.2f}" '
             f'class="star-fg" style="animation-delay: {delay}s"/>')
 
-    # 5. 流星
-    meteors = [(110, 60, 210, 80, "0.0s", 6.5), (660, 55, 190, 75, "2.5s", 8.5), (395, 385, 170, 62, "5.0s", 7.5)]
+    # 5. 流星(2 颗)
+    meteors = [(110, 60, 210, 80, "0.0s", 6.5), (660, 55, 190, 75, "2.5s", 8.5)]
     for x1, y1, tx, ty, delay, dur in meteors:
         add(f'  <line x1="{x1}" y1="{y1}" x2="{x1+18}" y2="{y1+6}" stroke="url(#shoot-grad)" '
             f'stroke-width="1.4" stroke-linecap="round" class="shooting-star" '
@@ -478,7 +483,7 @@ def build_hero(cfg, photo_path):
                 f'stroke-linecap="round"><animate attributeName="opacity" values="{op2};{op1};{op2}" '
                 f'dur="{dur}s" begin="{idx}s" repeatCount="indefinite"/></path>')
         d_full, _ = spiral_path(CX, CY, ac["a"], ac["k"], ac["t0"], ac["t0"] + 3.2, n=140, arm_offset=offset)
-        for p_idx in range(2):
+        for p_idx in range(1):
             add(f'  <circle r="1.6" fill="{color}" opacity="0.7">')
             add(f'    <animateMotion dur="{14 + idx * 2}s" begin="{p_idx * (6 + idx)}s" '
                 f'repeatCount="indefinite" path="{d_full}"/>')
