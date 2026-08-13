@@ -54,9 +54,13 @@
 <div align="center">
   <b>More shots / 更多照片</b>
   <br/><br/>
-  <img src="./assets/photos/lotus.jpg" width="280" alt="公园荷叶 by Crane"/>
-  <img src="./assets/photos/park.jpg" width="280" alt="公园 by Crane"/>
-  <img src="./assets/photos/bridge.jpg" width="190" alt="三官堂大桥 by Crane"/>
+  <table>
+    <tr>
+      <td align="center"><img src="./assets/photos/lotus.jpg" width="250" alt="公园荷叶 by Crane"/></td>
+      <td align="center"><img src="./assets/photos/park.jpg" width="250" alt="公园 by Crane"/></td>
+      <td align="center"><img src="./assets/photos/bridge.jpg" width="250" alt="三官堂大桥 by Crane"/></td>
+    </tr>
+  </table>
 </div>
 
 <br/>
