@@ -5,8 +5,8 @@ username: CraneBW
 
 profile:
   name: "Crane"
-  tagline: "AI Security Researcher · Milky Way Lover"
-  tagline_cn: "AI 安全研究者 · 银河爱好者"
+  tagline: "AI Security Researcher"
+  tagline_cn: "AI 安全研究者"
   initial: "C"
   philosophy: "Chasing stars in code and in the night sky."
   # 座右铭:编码与夜空,皆为追星
@@ -40,13 +40,13 @@ cards:
       - "Adversarial ML · LLM Security"
       - "对抗机器学习 · 大模型安全"
   - icon: "🌌"
-    title: "Milky Way"
-    title_cn: "银河"
+    title: "Night Sky"
+    title_cn: "星空"
     lines:
-      - "Just a Milky Way lover"
-      - "纯粹喜欢银河的人"
-      - "first shot caught this August"
-      - "八月拍到第一张银河(见下方)"
+      - "Just someone who loves the night sky"
+      - "只是喜欢抬头看星空的人"
+      - "first Milky Way shot this August"
+      - "八月拍了第一张银河(见下方)"
 
 theme:
   void: "#070b16"
