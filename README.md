@@ -38,8 +38,7 @@ B.Sc. Computer Science @ Ningbo University → M.Sc. Cybersec @ NUAA *(incoming)
 ### 📊 GitHub Stats / 数据统计
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=CraneBW&show_icons=true&include_all_commits=true&bg_color=0e1626&title_color=22d3ee&icon_color=a78bfa&text_color=94a3b8&hide_border=true" height="170" alt="GitHub Stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CraneBW&layout=compact&bg_color=0e1626&title_color=22d3ee&text_color=94a3b8&hide_border=true" height="170" alt="Top Languages"/>
+  <img src="./assets/generated/stats-card.svg" width="850" alt="GitHub Stats"/>
 </div>
 
 <br/>
@@ -67,15 +66,7 @@ B.Sc. Computer Science @ Ningbo University → M.Sc. Cybersec @ NUAA *(incoming)
 ### 📌 Featured Repos / 精选仓库
 
 <div align="center">
-  <a href="https://github.com/CraneBW/dailyfresh_re">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=CraneBW&repo=dailyfresh_re&bg_color=0e1626&title_color=22d3ee&icon_color=a78bfa&text_color=94a3b8&hide_border=true" alt="dailyfresh_re"/>
-  </a>
-  <a href="https://github.com/CraneBW/walkabout">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=CraneBW&repo=walkabout&bg_color=0e1626&title_color=22d3ee&icon_color=a78bfa&text_color=94a3b8&hide_border=true" alt="walkabout"/>
-  </a>
-  <a href="https://github.com/CraneBW/Net_in_Django">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=CraneBW&repo=Net_in_Django&bg_color=0e1626&title_color=22d3ee&icon_color=a78bfa&text_color=94a3b8&hide_border=true" alt="Net_in_Django"/>
-  </a>
+  <img src="./assets/generated/repo-cards.svg" width="850" alt="Featured Repos"/>
 </div>
 
 <br/>

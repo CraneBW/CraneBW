@@ -15,6 +15,7 @@ Crane's GitHub Profile README 生成器
     - GitHub 渲染 SVG 时允许 CSS 动画与 SMIL,禁止 JS,故只用这两种
 """
 
+import json
 import math
 import random
 import sys
@@ -369,6 +370,121 @@ def build_cards(cfg):
     return "\n".join(s) + "\n"
 
 
+# ---------------- 统计卡与仓库卡(数据来自 fetch_stats.py 生成的 stats.json) ----------------
+
+LANG_COLORS = {
+    "Python": "#3776AB", "Vue": "#42B883", "JavaScript": "#F7DF1E",
+    "TypeScript": "#3178C6", "HTML": "#E34F26", "CSS": "#563D7C",
+    "Astro": "#FF5D01", "Shell": "#89E051", "Makefile": "#427819",
+    "Jupyter Notebook": "#DA5B0B", "C": "#555555", "C++": "#f34b7d",
+    "Java": "#b07219", "Go": "#00ADD8", "Rust": "#dea584", "Other": "#8b949e",
+}
+
+
+def build_stats_card(cfg, stats):
+    T = cfg["theme"]
+    W, H = 850, 150
+    s = []
+    add = s.append
+    add(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">')
+    add(f'  <rect x="0" y="0" width="{W}" height="{H}" rx="14" ry="14" fill="{T["void"]}"/>')
+    add(f'  <rect x="0" y="0" width="4" height="{H}" rx="2" fill="{T["cyan"]}" opacity="0.9"/>')
+    # 标题
+    add(f'  <text x="24" y="28" fill="{T["text_bright"]}" font-size="13" font-weight="bold" '
+        f'font-family="sans-serif">GitHub Stats · 数据遥测</text>')
+    add(f'  <text x="{W - 24}" y="28" text-anchor="end" fill="{T["text_faint"]}" font-size="10" '
+        f'font-family="monospace">updated {stats.get("updated_at", "—")}</text>')
+    # 指标行
+    metrics = [
+        ("⭐", stats.get("stars", 0), "Stars"),
+        ("📦", stats.get("repos", 0), "Repos"),
+        ("✅", stats.get("year_commits", 0), "Commits (1y)"),
+        ("👥", stats.get("followers", 0), "Followers"),
+        ("🍴", stats.get("forks", 0), "Forks"),
+        ("📝", stats.get("gists", 0), "Gists"),
+    ]
+    n = len(metrics)
+    box_w = (W - 48 - (n - 1) * 12) // n
+    x = 24
+    for icon, value, label in metrics:
+        add(f'  <rect x="{x}" y="40" width="{box_w}" height="58" rx="10" fill="{T["nebula"]}" '
+            f'stroke="{T["star_dust"]}" stroke-width="1"/>')
+        add(f'  <text x="{x + box_w // 2}" y="63" text-anchor="middle" font-size="15">{icon}</text>')
+        add(f'  <text x="{x + box_w // 2}" y="84" text-anchor="middle" fill="{T["cyan"]}" '
+            f'font-size="17" font-weight="bold" font-family="sans-serif">{value:,}</text>')
+        add(f'  <text x="{x + box_w // 2}" y="96" text-anchor="middle" fill="{T["text_dim"]}" '
+            f'font-size="9.5" font-family="sans-serif">{label}</text>')
+        x += box_w + 12
+    # 语言占比条
+    langs = {k: v for k, v in (stats.get("languages") or {}).items() if k in LANG_COLORS or True}
+    total = sum(langs.values()) if langs else 1
+    items = sorted(langs.items(), key=lambda kv: -kv[1])[:6]
+    bar_w = W - 48
+    x = 24
+    for lang, nbytes in items:
+        frac = nbytes / total
+        if frac < 0.005:
+            continue
+        w = max(int(bar_w * frac), 4)
+        color = LANG_COLORS.get(lang, "#8b949e")
+        add(f'  <rect x="{x}" y="112" width="{w}" height="8" rx="4" fill="{color}"/>')
+        x += w
+    # 语言标签
+    lx = 24
+    for lang, nbytes in sorted(langs.items(), key=lambda kv: -kv[1])[:6]:
+        frac = nbytes / total
+        if frac < 0.005:
+            continue
+        label = f'{lang} {frac * 100:.0f}%'
+        add(f'  <text x="{lx}" y="136" fill="{T["text_dim"]}" font-size="9.5" '
+            f'font-family="monospace">{esc(label)}</text>')
+        lx += 24 + len(label) * 6.2
+    add("</svg>")
+    return "\n".join(s) + "\n"
+
+
+def build_repo_cards(cfg, stats):
+    T = cfg["theme"]
+    repos = stats.get("featured_repos") or []
+    W, H = 850, 118
+    n = max(len(repos), 1)
+    card_w, gap = (W - 48 - (n - 1) * 14) // n, 14
+    s = []
+    add = s.append
+    add(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">')
+    x = 24
+    for r in repos:
+        add(f'  <rect x="{x}" y="8" width="{card_w}" height="{H - 16}" rx="12" fill="{T["void"]}" '
+            f'stroke="{T["star_dust"]}" stroke-width="1"/>')
+        # 顶部语言色点 + 仓库名
+        color = LANG_COLORS.get(r.get("language") or "Other", "#8b949e")
+        add(f'  <circle cx="{x + 16}" cy="28" r="4" fill="{color}"/>')
+        add(f'  <text x="{x + 26}" y="32" fill="{T["cyan"]}" font-size="12.5" font-weight="bold" '
+            f'font-family="monospace">{esc(r.get("name", ""))}</text>')
+        # 描述(截断 2 行)
+        desc = r.get("description") or "No description"
+        if len(desc) > 34:
+            desc = desc[:33] + "…"
+        add(f'  <text x="{x + 16}" y="56" fill="{T["text_dim"]}" font-size="10.5" '
+            f'font-family="sans-serif">{esc(desc)}</text>')
+        # 底部:语言 + star
+        add(f'  <text x="{x + 16}" y="92" fill="{color}" font-size="10" font-family="monospace">'
+            f'{esc(r.get("language") or "Other")}</text>')
+        add(f'  <text x="{x + card_w - 16}" y="92" text-anchor="end" fill="{T["amber"]}" '
+            f'font-size="10" font-family="monospace">⭐ {r.get("stars", 0)}</text>')
+        x += card_w + gap
+    add("</svg>")
+    return "\n".join(s) + "\n"
+
+
+def load_stats():
+    path = os.path.join(OUT_DIR, "stats.json")
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
 # ---------------- 主入口 ----------------
 
 def load_config():
@@ -391,9 +507,12 @@ def load_config():
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     cfg = load_config()
+    stats = load_stats()
     files = {
         "galaxy-header.svg": build_header(cfg),
         "info-cards.svg": build_cards(cfg),
+        "stats-card.svg": build_stats_card(cfg, stats),
+        "repo-cards.svg": build_repo_cards(cfg, stats),
     }
     for name, content in files.items():
         path = os.path.join(OUT_DIR, name)

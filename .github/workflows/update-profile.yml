@@ -1,0 +1,47 @@
+# 定时刷新主页数据:拉取 GitHub API → 重新生成 SVG → 自动提交
+# 数据来自 github-readme-stats 等外部服务不可靠,自绘卡片零外部依赖
+name: Update profile stats
+
+on:
+  schedule:
+    - cron: "17 */12 * * *"   # 每 12 小时(避开整点,减少服务拥堵)
+  workflow_dispatch:          # 支持手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Fetch GitHub stats
+        run: python fetch_stats.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate SVGs
+        run: python generator.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "crane-profile-bot"
+          git config user.email "cranebw@users.noreply.github.com"
+          git add assets/generated
+          if ! git diff --quiet && ! git diff --cached --quiet; then
+            git commit -m "chore: refresh profile stats [skip ci]"
+            git push
+            echo "已更新并推送"
+          else
+            echo "数据无变化,跳过提交"
+          fi
