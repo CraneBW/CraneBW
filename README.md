@@ -20,8 +20,8 @@ B.Sc. Computer Science @ Ningbo University → M.Sc. Cybersec @ NUAA *(incoming)
 🔬 Research in **AI Security** — Adversarial ML · LLM Security
 🔬 研究方向 **AI 安全** — 对抗机器学习 · 大模型安全
 
-🌌 Just someone who loves the night sky — first Milky Way shot this August
-🌌 只是喜欢抬头看星空的人 — 八月刚拍到第一张银河
+🌌 Night sky — first Milky Way shot this August
+🌌 夜空 · 八月第一次拍银河
 
 </div>
 

@@ -43,10 +43,10 @@ cards:
     title: "Night Sky"
     title_cn: "星空"
     lines:
-      - "Just someone who loves the night sky"
-      - "只是喜欢抬头看星空的人"
-      - "first Milky Way shot this August"
-      - "八月拍了第一张银河(见下方)"
+      - "Night sky · first Milky Way shot"
+      - "夜空,八月第一次拍银河"
+      - "see gallery below"
+      - "照片见下方"
 
 theme:
   void: "#070b16"
