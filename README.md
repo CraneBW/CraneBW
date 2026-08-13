@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/generated/galaxy-header.svg" width="850" alt="Crane's Galaxy"/>
+  <img src="./assets/generated/galaxy-hero.svg" width="850" alt="Crane's Galaxy"/>
 </div>
 
 <br/>

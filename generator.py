@@ -15,6 +15,7 @@ Crane's GitHub Profile README 生成器
     - GitHub 渲染 SVG 时允许 CSS 动画与 SMIL,禁止 JS,故只用这两种
 """
 
+import base64
 import json
 import math
 import random
@@ -370,6 +371,177 @@ def build_cards(cfg):
     return "\n".join(s) + "\n"
 
 
+# ---------------- 整页 hero 背景版(银河照片 base64 内嵌 + 星系动画叠加) ----------------
+
+def build_hero(cfg, photo_path):
+    """整页背景版头图:银河实拍照片(压暗)作背景,星系动画(旋臂/粒子/流星/核心)叠加。
+    照片必须 base64 内嵌——GitHub 渲染仓库内 SVG 时不允许引用外部文件。"""
+    T = cfg["theme"]
+    p = cfg["profile"]
+    W, H = 850, 420
+    CX, CY = 425, 268  # 星系核心偏下,给顶部文字让位
+    arms = cfg["galaxy_arms"]
+    arm_colors = {"cyan": T["cyan"], "violet": T["violet"], "amber": T["amber"]}
+    rng = random.Random(cfg.get("random_seed", 42))
+
+    with open(photo_path, "rb") as f:
+        photo_b64 = base64.b64encode(f.read()).decode()
+
+    s = []
+    add = s.append
+    add(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">')
+    add("  <defs>")
+    add("    <style>")
+    css = """      .star-fg { animation: twinkle-fast 3s ease-in-out infinite; }
+      @keyframes twinkle-fast { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.9; } }
+      .core-ring { animation: pulse-core 3s ease-in-out infinite; }
+      .core-ring-inner { animation: pulse-core 3s ease-in-out infinite 1.5s; }
+      @keyframes pulse-core {
+        0%, 100% { stroke-opacity: 0.3; transform: scale(1); transform-origin: __CX__px __CY__px; }
+        50% { stroke-opacity: 0.8; transform: scale(1.06); transform-origin: __CX__px __CY__px; }
+      }
+      .shooting-star { opacity: 0; animation: shoot linear infinite; }
+      @keyframes shoot {
+        0% { opacity: 0; transform: translate(0, 0); }
+        5% { opacity: 0.9; }
+        15% { opacity: 0.6; transform: translate(var(--tx), var(--ty)); }
+        20% { opacity: 0; transform: translate(var(--tx), var(--ty)); }
+        100% { opacity: 0; }
+      }"""
+    add(css.replace("__CX__", str(CX)).replace("__CY__", str(CY)))
+    add("    </style>")
+    add(f'    <filter id="nebula-outer"><feGaussianBlur stdDeviation="60"/></filter>')
+    add(f'    <filter id="nebula-inner"><feGaussianBlur stdDeviation="30"/></filter>')
+    add(f'    <filter id="label-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.5"/></filter>')
+    add(f'    <filter id="core-bright-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4"/></filter>')
+    add(f'    <radialGradient id="core-haze" cx="50%" cy="50%" r="50%">'
+        f'<stop offset="0%" stop-color="{T["cyan"]}" stop-opacity="0.45"/>'
+        f'<stop offset="50%" stop-color="{T["violet"]}" stop-opacity="0.18"/>'
+        f'<stop offset="100%" stop-color="{T["cyan"]}" stop-opacity="0"/></radialGradient>')
+    add(f'    <radialGradient id="core-inner" cx="50%" cy="50%" r="50%">'
+        f'<stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>'
+        f'<stop offset="40%" stop-color="{T["cyan"]}" stop-opacity="0.3"/>'
+        f'<stop offset="100%" stop-color="{T["cyan"]}" stop-opacity="0"/></radialGradient>')
+    add(f'    <linearGradient id="shoot-grad" x1="0%" y1="0%" x2="100%" y2="0%">'
+        f'<stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>'
+        f'<stop offset="100%" stop-color="#ffffff" stop-opacity="0"/></linearGradient>')
+    # 顶部压暗渐变(文字可读)与整体暗化
+    add(f'    <linearGradient id="dim-top" x1="0" y1="0" x2="0" y2="1">'
+        f'<stop offset="0%" stop-color="{T["void"]}" stop-opacity="0.85"/>'
+        f'<stop offset="45%" stop-color="{T["void"]}" stop-opacity="0.35"/>'
+        f'<stop offset="100%" stop-color="{T["void"]}" stop-opacity="0.05"/></linearGradient>')
+    add("  </defs>")
+
+    # 1. 银河照片背景(base64 内嵌,slice 裁切填满)
+    add(f'  <image href="data:image/jpeg;base64,{photo_b64}" width="{W}" height="{H}" '
+        f'preserveAspectRatio="xMidYMid slice"/>')
+    # 2. 压暗层
+    add(f'  <rect x="0" y="0" width="{W}" height="{H}" fill="url(#dim-top)"/>')
+    add(f'  <rect x="0" y="0" width="{W}" height="{H}" fill="{T["void"]}" opacity="0.35"/>')
+
+    # 3. 星云光晕(叠在照片上增强星系感)
+    add(f'  <circle cx="{CX}" cy="{CY+30}" r="150" fill="{T["cyan"]}" opacity="0.10" filter="url(#nebula-outer)"/>')
+    add(f'  <circle cx="{CX-180}" cy="{CY-60}" r="110" fill="{T["violet"]}" opacity="0.10" filter="url(#nebula-outer)"/>')
+    add(f'  <circle cx="{CX+190}" cy="{CY+40}" r="100" fill="{T["amber"]}" opacity="0.07" filter="url(#nebula-outer)"/>')
+
+    # 4. 少量闪烁星点缀(照片自带星空,这里补动态星星)
+    for _ in range(22):
+        x = rng.uniform(8, W - 8)
+        y = rng.uniform(10, H - 10)
+        r = rng.uniform(0.5, 1.1)
+        c = rng.choice(["#ffffff", T["cyan"], T["violet"]])
+        op = rng.uniform(0.4, 0.85)
+        delay = round(rng.uniform(0, 2.7), 1)
+        add(f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="{r:.2f}" fill="{c}" opacity="{op:.2f}" '
+            f'class="star-fg" style="animation-delay: {delay}s"/>')
+
+    # 5. 流星
+    meteors = [(110, 60, 210, 80, "0.0s", 6.5), (660, 55, 190, 75, "2.5s", 8.5), (395, 385, 170, 62, "5.0s", 7.5)]
+    for x1, y1, tx, ty, delay, dur in meteors:
+        add(f'  <line x1="{x1}" y1="{y1}" x2="{x1+18}" y2="{y1+6}" stroke="url(#shoot-grad)" '
+            f'stroke-width="1.4" stroke-linecap="round" class="shooting-star" '
+            f'style="animation-delay: {delay}; --tx: {tx}px; --ty: {ty}px; animation-duration: {dur}s"/>')
+
+    # 6. 旋臂(同 build_header 的几何)
+    arm_cfg = {"cyan": dict(a=30, k=0.44, t0=0.0, t1=3.2),
+               "violet": dict(a=30, k=0.44, t0=0.0, t1=3.2),
+               "amber": dict(a=30, k=0.44, t0=0.0, t1=3.2)}
+    for idx, arm in enumerate(arms):
+        color = arm_colors[arm["color"]]
+        ac = arm_cfg[arm["color"]]
+        offset = idx * (2 * math.pi / 3) - 0.785
+        segs = [(0.0, 1.2, 2.0, 0.55, 0.40), (1.2, 2.4, 1.5, 0.40, 0.28), (2.4, 3.2, 1.1, 0.28, 0.16)]
+        for t0, t1, w, op1, op2 in segs:
+            d, _ = spiral_path(CX, CY, ac["a"], ac["k"], ac["t0"] + t0, ac["t0"] + t1, n=40, arm_offset=offset)
+            dur = 8.0 + idx
+            add(f'  <path d="{d}" fill="none" stroke="{color}" stroke-width="{w}" opacity="{op1}" '
+                f'stroke-linecap="round"><animate attributeName="opacity" values="{op2};{op1};{op2}" '
+                f'dur="{dur}s" begin="{idx}s" repeatCount="indefinite"/></path>')
+        d_full, _ = spiral_path(CX, CY, ac["a"], ac["k"], ac["t0"], ac["t0"] + 3.2, n=140, arm_offset=offset)
+        for p_idx in range(2):
+            add(f'  <circle r="1.6" fill="{color}" opacity="0.7">')
+            add(f'    <animateMotion dur="{14 + idx * 2}s" begin="{p_idx * (6 + idx)}s" '
+                f'repeatCount="indefinite" path="{d_full}"/>')
+            add(f'    <animate attributeName="opacity" values="0;0.75;0.3;0" '
+                f'dur="{14 + idx * 2}s" begin="{p_idx * (6 + idx)}s" repeatCount="indefinite"/>')
+            add('  </circle>')
+        n_items = len(arm["items"])
+        for j, item in enumerate(arm["items"]):
+            frac = 0.25 + 0.65 * (j / max(n_items - 1, 1))
+            t = frac * 3.2
+            r = ac["a"] * math.exp(ac["k"] * t)
+            theta = t + offset
+            x, y = CX + r * math.cos(theta), CY + r * math.sin(theta)
+            dx, dy = x - CX, y - CY
+            length = math.hypot(dx, dy)
+            ux, uy = dx / length, dy / length
+            lx, ly = x + ux * 22, y + uy * 12
+            anchor = "start" if x > CX + 30 else "end"
+            tx = lx + (4 if anchor == "start" else -4)
+            add(f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="2.6" fill="{color}" opacity="0.9">'
+                f'<animate attributeName="opacity" values="0.9;1;0.9" dur="5s" '
+                f'begin="{j * 0.5}s" repeatCount="indefinite"/></circle>')
+            add(f'  <line x1="{x:.1f}" y1="{y:.1f}" x2="{lx:.1f}" y2="{ly:.1f}" stroke="{color}" '
+                f'stroke-width="0.5" opacity="0.3" stroke-dasharray="2 3"/>')
+            add(f'  <text x="{tx:.1f}" y="{ly + 3:.1f}" text-anchor="{anchor}" fill="{color}" '
+                f'font-size="9.5" font-family="monospace" opacity="0.25" filter="url(#label-glow)">{esc(item)}</text>')
+            add(f'  <text x="{tx:.1f}" y="{ly + 3:.1f}" text-anchor="{anchor}" fill="{color}" '
+                f'font-size="9.5" font-family="monospace" opacity="0.9">{esc(item)}</text>')
+
+    # 7. 轨道环
+    add(f'  <ellipse cx="{CX}" cy="{CY}" rx="62" ry="20" fill="none" stroke="{T["cyan"]}" '
+        f'stroke-width="0.6" opacity="0.18" stroke-dasharray="4 6">'
+        f'<animateTransform attributeName="transform" type="rotate" from="0 {CX} {CY}" '
+        f'to="360 {CX} {CY}" dur="20s" repeatCount="indefinite"/></ellipse>')
+    add(f'  <ellipse cx="{CX}" cy="{CY}" rx="84" ry="26" fill="none" stroke="{T["violet"]}" '
+        f'stroke-width="0.5" opacity="0.12" stroke-dasharray="3 8">'
+        f'<animateTransform attributeName="transform" type="rotate" from="360 {CX} {CY}" '
+        f'to="0 {CX} {CY}" dur="30s" repeatCount="indefinite"/></ellipse>')
+
+    # 8. 星系核心
+    add(f'  <circle cx="{CX}" cy="{CY}" r="42" fill="url(#core-haze)" opacity="0.5"/>')
+    add(f'  <circle cx="{CX}" cy="{CY}" r="25" fill="url(#core-inner)" opacity="0.65"/>')
+    add(f'  <ellipse cx="{CX}" cy="{CY}" rx="21" ry="19" fill="none" stroke="{T["cyan"]}" '
+        f'stroke-width="1.2" opacity="0.55" stroke-dasharray="5 3" class="core-ring"/>')
+    add(f'  <circle cx="{CX}" cy="{CY}" r="14" fill="none" stroke="{T["violet"]}" '
+        f'stroke-width="0.8" opacity="0.4" class="core-ring-inner"/>')
+    add(f'  <circle cx="{CX}" cy="{CY}" r="11" fill="{T["nebula"]}" stroke="{T["star_dust"]}" stroke-width="0.5"/>')
+    add(f'  <circle cx="{CX}" cy="{CY}" r="3" fill="{T["cyan"]}" filter="url(#core-bright-glow)" opacity="0.95"/>')
+    add(f'  <text x="{CX}" y="{CY + 5}" text-anchor="middle" fill="{T["cyan"]}" '
+        f'font-size="13" font-weight="bold" font-family="monospace">{esc(p["initial"])}</text>')
+
+    # 9. 文字区(顶部,压暗区内)
+    add(f'  <text x="{CX}" y="58" text-anchor="middle" fill="{T["text_bright"]}" '
+        f'font-size="30" font-weight="bold" font-family="sans-serif">{esc(p["name"])}</text>')
+    add(f'  <text x="{CX}" y="84" text-anchor="middle" fill="{T["text_dim"]}" '
+        f'font-size="13.5" font-family="sans-serif">{esc(p["tagline"])} · {esc(p["tagline_cn"])}</text>')
+    add(f'  <text x="{CX}" y="{H - 14}" text-anchor="middle" fill="{T["text_faint"]}" '
+        f'font-size="11" font-family="monospace" font-style="italic">{esc(p["philosophy"])}</text>')
+
+    add("</svg>")
+    return "\n".join(s) + "\n"
+
+
 # ---------------- 统计卡与仓库卡(数据来自 fetch_stats.py 生成的 stats.json) ----------------
 
 LANG_COLORS = {
@@ -511,8 +683,10 @@ def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     cfg = load_config()
     stats = load_stats()
+    photo = os.path.join(HERE, "assets", "photos", "galaxy-hero.jpg")
     files = {
         "galaxy-header.svg": build_header(cfg),
+        "galaxy-hero.svg": build_hero(cfg, photo) if os.path.exists(photo) else build_header(cfg),
         "info-cards.svg": build_cards(cfg),
         "stats-card.svg": build_stats_card(cfg, stats),
         "repo-cards.svg": build_repo_cards(cfg, stats),
