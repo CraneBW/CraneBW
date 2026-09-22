@@ -73,7 +73,7 @@
 
 <br/>
 
-<!-- 联系方式:把占位换成你的邮箱/博客/社交链接 -->
+
 <p align="center">
   <samp>
     <a href="mailto:3116767084@qq.com">email</a> .
