@@ -603,11 +603,13 @@ def build_repo_cards(cfg, stats):
     repos = stats.get("featured_repos") or []
     W, H = 850, 118
     n = max(len(repos), 1)
-    card_w, gap = (W - 48 - (n - 1) * 14) // n, 14
+    gap = 14
+    # 单个仓库时不要把卡片拉满整行:限制宽度后整行居中
+    card_w = min((W - 48 - (n - 1) * gap) // n, 360)
     s = []
     add = s.append
     add(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">')
-    x = 24
+    x = (W - (n * card_w + (n - 1) * gap)) // 2
     for r in repos:
         add(f'  <rect x="{x}" y="8" width="{card_w}" height="{H - 16}" rx="12" fill="{T["void"]}" '
             f'stroke="{T["star_dust"]}" stroke-width="1"/>')

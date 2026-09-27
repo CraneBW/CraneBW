@@ -1,45 +1,36 @@
 {
-  "repos": 8,
+  "repos": 9,
   "followers": 0,
   "following": 0,
   "gists": 0,
-  "stars": 1,
-  "forks": 0,
-  "year_commits": 358,
+  "stars": 31,
+  "forks": 1,
+  "year_commits": 520,
   "languages": {
-    "Python": 551834,
+    "C++": 7262029,
+    "Cuda": 3555295,
+    "Python": 1623727,
+    "Go": 59559,
+    "CMake": 57686,
+    "Shell": 18636,
+    "Batchfile": 11177,
+    "C": 1404,
+    "Dockerfile": 1231,
     "HTML": 155899,
     "JavaScript": 324468,
     "CSS": 126475,
     "TypeScript": 442366,
-    "Shell": 4555,
     "PowerShell": 4457
   },
   "featured_repos": [
     {
-      "name": "dailyfresh_re",
-      "description": "",
-      "language": "Python",
-      "stars": 1,
+      "name": "ninfer-ternary-bonsai-ada",
+      "description": "Ternary (2.125 bit/weight) Bonsai 2 27B on the NINFER engine",
+      "language": "C++",
+      "stars": 30,
       "is_fork": false,
-      "parent": ""
-    },
-    {
-      "name": "panda-video-generator",
-      "description": "视频自动化引擎: 用程序员的方式帮你自动化视频创作与发布",
-      "language": "TypeScript",
-      "stars": 0,
-      "is_fork": true,
-      "parent": ""
-    },
-    {
-      "name": "deep-researcher",
-      "description": "export const SPINNER_VERBS = [   'Accomplishing',   'Actioni",
-      "language": null,
-      "stars": 0,
-      "is_fork": true,
       "parent": ""
     }
   ],
-  "updated_at": "2026-08-14"
+  "updated_at": "2026-09-27"
 }

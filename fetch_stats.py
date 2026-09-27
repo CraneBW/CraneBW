@@ -18,6 +18,9 @@ TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "assets", "generated", "stats.json")
 
+# 主页精选仓库,按此顺序展示。留空则回退到自动排序(star 优先,其次有描述,再按最近更新)取前 3
+FEATURED = ["ninfer-ternary-bonsai-ada"]
+
 
 def api(path):
     headers = {
@@ -66,12 +69,15 @@ def main():
     except Exception:
         pass
 
-    # 精选仓库(排除同名 profile 仓库;star 优先,其次有描述,再按最近更新)
-    candidates = [r for r in repos if r["name"] != USER]
-    candidates.sort(
-        key=lambda r: (r["stargazers_count"], bool(r["description"]), r["pushed_at"]),
-        reverse=True,
-    )
+    # 精选仓库:白名单优先(仍然排除同名 profile 仓库);白名单为空时回退到自动排序取前 3
+    by_name = {r["name"]: r for r in repos if r["name"] != USER}
+    picked = [by_name[name] for name in FEATURED if name in by_name]
+    if not picked:
+        picked = sorted(
+            by_name.values(),
+            key=lambda r: (r["stargazers_count"], bool(r["description"]), r["pushed_at"]),
+            reverse=True,
+        )[:3]
     featured = [
         {
             "name": r["name"],
@@ -81,7 +87,7 @@ def main():
             "is_fork": r["fork"],
             "parent": (r.get("parent") or {}).get("full_name", ""),
         }
-        for r in candidates[:3]
+        for r in picked
     ]
 
     data = {
